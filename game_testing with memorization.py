@@ -49,6 +49,9 @@ def alphabeta_search(state, game):
     # return the best move from that state
     print "alpha beta exploring"
     print state.board
+    if(state.board in memo):
+        print "no need to go alpha-beta"
+        return memo[state.board]
     player = game.to_move(state)
 
     # Functions used by alphabeta
@@ -59,7 +62,12 @@ def alphabeta_search(state, game):
             return game.utility(state, player)
         v = -infinity
         for a in game.actions(state):
-            v = max(v, min_value(game.result(state, a), alpha, beta))
+            if(a in memo_max):
+                print("memo max used in " + str(a))
+                v = memo_max[a]
+            else:
+                v = max(v, min_value(game.result(state, a), alpha, beta))
+                memo_max[a] = v
             if v >= beta:
                 return v
             alpha = max(alpha, v)
@@ -72,7 +80,12 @@ def alphabeta_search(state, game):
             return game.utility(state, player)
         v = infinity
         for a in game.actions(state):
-            v = min(v, max_value(game.result(state, a), alpha, beta))
+            if(a in memo_min):
+                print("memo min used in " + str(a))
+                v = memo_min[a]
+            else:
+                v = min(v, max_value(game.result(state, a), alpha, beta))
+                memo_min[a] = v
             if v <= alpha:
                 return v
             beta = min(beta, v)
@@ -89,6 +102,7 @@ def alphabeta_search(state, game):
             best_action = a
     print "best action"
     print best_action
+    memo[state.board] = best_action 
     return best_action
 
 # ______________________________________________________________________________
