@@ -7,7 +7,9 @@ from utils import argmax
 
 infinity = float('inf')
 GameState = namedtuple('GameState', 'to_move, utility, board, moves')
-
+memo_max = {}
+memo_min = {}
+memo = {}
 # ______________________________________________________________________________
 # Minimax Search
 
@@ -44,27 +46,44 @@ def minimax_decision(state, game):
 def alphabeta_search(state, game):
     """Search game to determine best action; use alpha-beta pruning.
     As in [Figure 5.7], this version searches all the way to the leaves."""
-
+    # return the best move from that state
+    print "alpha beta exploring"
+    print state.board
+    if(state.board in memo):
+        print "no need to go alpha-beta"
+        return memo[state.board]
     player = game.to_move(state)
 
     # Functions used by alphabeta
     def max_value(state, alpha, beta):
+        print "max_value exploring"
+        print state.board
         if game.terminal_test(state):
             return game.utility(state, player)
         v = -infinity
         for a in game.actions(state):
-            v = max(v, min_value(game.result(state, a), alpha, beta))
+            if(a in memo_max):
+                print("memo max used in " + a)
+                v = memo_max[a]
+            else:
+                v = max(v, min_value(game.result(state, a), alpha, beta))
             if v >= beta:
                 return v
             alpha = max(alpha, v)
         return v
 
     def min_value(state, alpha, beta):
+        print "min_value exploring"
+        print state.board
         if game.terminal_test(state):
             return game.utility(state, player)
         v = infinity
         for a in game.actions(state):
-            v = min(v, max_value(game.result(state, a), alpha, beta))
+            if(a in memo_min):
+                print("memo min used in " + a)
+                v = memo_min[a]
+            else:
+                v = min(v, max_value(game.result(state, a), alpha, beta))
             if v <= alpha:
                 return v
             beta = min(beta, v)
@@ -79,6 +98,9 @@ def alphabeta_search(state, game):
         if v > best_score:
             best_score = v
             best_action = a
+    print "best action"
+    print best_action
+    memo[state.board] = best_action 
     return best_action
 
 # ______________________________________________________________________________
@@ -166,17 +188,17 @@ class Game:
 
 class NIM(Game):
     def __init__(self):
-        self.initial = GameState(to_move='0', utility=0, board=[1,2,1], moves=[])
+        self.initial = GameState(to_move='0', utility=0, board=(2,3,0), moves=[])
 
     def actions(self, state):
         """Legal moves are any square not yet taken."""
         list_moves = []
         for x in range (0,state.board[0]):
-                list_moves.append([x,state.board[1],state.board[2]])
+                list_moves.append((x,state.board[1],state.board[2]))
         for x in range (0,state.board[2]):
-                list_moves.append([state.board[0],state.board[1],x])
+                list_moves.append((state.board[0],state.board[1],x))
         for x in range (0,state.board[1]):
-                list_moves.append([state.board[0],x,state.board[2]])
+                list_moves.append((state.board[0],x,state.board[2]))
         return list_moves
 
     def result(self, state, move):
