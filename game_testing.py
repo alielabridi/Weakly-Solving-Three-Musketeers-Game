@@ -151,16 +151,23 @@ class Game:
     def play_game(self, *players):
         """Play an n-person, move-alternating game."""
         state = self.initial
+        print "initial state of the board"
+        print state
         while True:
             for player in players:
+                print ("player " + state.to_move)
                 move = player(self, state)
+                print move
                 state = self.result(state, move)
                 if self.terminal_test(state):
+                    print("end state of the board")
                     self.display(state)
                     return self.utility(state, self.to_move(self.initial))
 
 class NIM(Game):
-    initial = '0'
+    def __init__(self):
+        self.initial = GameState(to_move='0', utility=0, board=[1,2,1], moves=[])
+
     def actions(self, state):
         """Legal moves are any square not yet taken."""
         list_moves = []
@@ -182,7 +189,7 @@ class NIM(Game):
         return state.utility if player == '0' else -state.utility
 
     def terminal_test(self, state):
-        return state.utility != 0
+        return state.utility != 0 or state.board == None
 
     def to_move(self, state):
         return '1' if state.to_move == '0' else '1'
@@ -196,8 +203,6 @@ class NIM(Game):
 
 
 # Creating the game instances
-f52 = Fig52Game()
-ttt = TicTacToe()
 NIM_game = NIM()
 
 
@@ -260,7 +265,7 @@ def test_random_tests():
 #test_random_tests()
 print("Starting the program...")
 
-stateNIM = GameState(to_move='0', utility=0, board=[1,0,0], moves=[])
-#NIM_game.play_game(alphabeta_player,random_player)
-print alphabeta_search(stateNIM,NIM_game)
+#stateNIM = GameState(to_move='0', utility=0, board=[20,2,1], moves=[])
+print ("winner is " + str(NIM_game.play_game(alphabeta_player,alphabeta_player)))
+#print alphabeta_search(stateNIM,NIM_game)
 #NIM_game.play_game(alphabeta_search(stateNIM, NIM_game),query_player )
