@@ -2,6 +2,7 @@
 
 from collections import namedtuple
 import random
+from copy import deepcopy
 
 from utils import argmax
 
@@ -225,9 +226,107 @@ class NIM(Game):
         return 1
 
 
+Diagonal_moves = [(1,0),(-1,0),(0,-1),(0,1)]
+initial_board = (('G','G','G','G','M'),('G','G','G','G','G'),('G','G','M','G','G'),('G','G','G','G','G'),('M','G','G','G','G'))
 
+class ThreeMusketeers(Game):
+    def __init__(self, h = 5, w = 5):
+        self.h = 5
+        self.w = 5
+        self.initial = GameState(to_move = 'M', utility = 0, board = initial_board, moves = {})
+        self.Musketeers_positions = []
+
+    def terminal_state(self, state):
+        self.Musketeers_positions = []
+        for i in state.board:
+            for j in state.board[i]:
+                if(state.board[i][j] == 'M'):
+                    self.Musketeers_positions.append((i,j))
+
+        # same row(Guardmen winning)
+        if(self.Musketeers_positions[0][0] == self.Musketeers_positions[1][0] and
+         self.Musketeers_positions[1][0] == self.Musketeers_positions[2][0]):
+            return 0
+        # same column (Gardsmen winning)
+        if(self.Musketeers_positions[0][1] == self.Musketeers_positions[1][1] and
+         self.Musketeers_positions[1][1] == self.Musketeers_positions[2][1]):
+            return 0
+        # no possible move (Musketeers winning)
+        for M in self.Musketeers_positions:
+            for posssible_moves in Diagonal_moves:
+                if(state.board[M[0]+posssible_moves[0]][M[1]+posssible_moves[1]] == 'G'):
+                    return 1
+        return 0
+    def to_move(self, state):
+        return 'M' if state.to_move == 'G' else 'M'
+
+    def withing_board_range(self,x,y):
+        return not(x >= self.h or y >= self.w or y < 0 or x < 0)
+
+    def actions(self, state):
+        self.Musketeers_positions = []
+        for i  in  range(0,self.h):
+            for j in range(0,self.w):
+                if(state.board[i][j] == 'M'):
+                    self.Musketeers_positions.append((i,j))
+        List = []
+        if(state.to_move == 'M'):
+            for M in self.Musketeers_positions:
+                for posssible_moves in Diagonal_moves:
+                    if(self.withing_board_range(M[0]+posssible_moves[0],M[1]+posssible_moves[1]) \
+                        and state.board[M[0]+posssible_moves[0]][M[1]+posssible_moves[1]] == 'G'):
+                        List.append((M[0],M[1],M[0]+posssible_moves[0],M[1]+posssible_moves[1]))
+            return List
+        for i  in  range(0,self.h):
+            for j in range(0,self.w):
+                if(state.board[i][j] == 'G'):
+                    for (x,y) in Diagonal_moves:
+                        if(self.withing_board_range(i+x,j+y) and state.board[i+x][j+y] == ' '):
+                            List.append((i,j,i+x,j+y))
+        return List
+
+    def result(self, state, move):
+        board = deepcopy(state.board)
+        lstboard = []
+        for r in board:
+            lstboard.append(list(r))
+        if(state.to_move == 'M'):
+            lstboard[move[0]][move[1]] = ' '
+            lstboard[move[2]][move[3]] = 'M'
+        else:
+            lstboard[move[0]][move[1]] = ' '
+            lstboard[move[2]][move[3]] = 'G'
+        board = ()
+        for r in lstboard:
+            board = board + (tuple(r),)
+
+        return GameState(to_move=('M' if state.to_move == 'G' else 'M'),
+                         utility=self.compute_utility(board, move, state.to_move),
+                         board=board, moves={})
+    def utility(self, state, player):
+        """Return the value to player; 1 for win, -1 for loss, 0 otherwise."""
+        return state.utility if player == 'M' else -state.utility
+
+    def compute_utility(self, board, move, to_move):
+        """If 'M' wins with this move, return 1; if 'G' wins return -1; else return 0."""
+        # same row(Guardmen winning)
+        if(self.Musketeers_positions[0][0] == self.Musketeers_positions[1][0] and
+         self.Musketeers_positions[1][0] == self.Musketeers_positions[2][0]):
+            return -1
+        # same column (Gardsmen winning)
+        if(self.Musketeers_positions[0][1] == self.Musketeers_positions[1][1] and
+         self.Musketeers_positions[1][1] == self.Musketeers_positions[2][1]):
+            return -1
+        # no possible move (Musketeers winning)
+        for M in self.Musketeers_positions:
+            for posssible_moves in Diagonal_moves:
+                if(self.withing_board_range(M[0]+posssible_moves[0],M[1]+posssible_moves[1]) \
+                    and board[M[0]+posssible_moves[0]][M[1]+posssible_moves[1]] == 'G'):
+                    return 0
+        return 1
 # Creating the game instances
 NIM_game = NIM()
+ThreeMusketeers_game = ThreeMusketeers()
 
 
 def gen_state(to_move='X', x_positions=[], o_positions=[], h=3, v=3, k=3):
@@ -290,6 +389,7 @@ def test_random_tests():
 print("Starting the program...")
 
 #stateNIM = GameState(to_move='0', utility=0, board=[20,2,1], moves=[])
-print ("winner is " + str(NIM_game.play_game(alphabeta_player,alphabeta_player)))
+#print ("winner is " + str(NIM_game.play_game(alphabeta_player,alphabeta_player)))
+print ("winner is " + str(ThreeMusketeers_game.play_game(alphabeta_player,alphabeta_player)))
 #print alphabeta_search(stateNIM,NIM_game)
 #NIM_game.play_game(alphabeta_search(stateNIM, NIM_game),query_player )
