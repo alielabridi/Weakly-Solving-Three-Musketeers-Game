@@ -12,6 +12,35 @@ memo_max = {}
 memo_min = {}
 memo = {}
 memorization = 0
+# ______________________________________________________________________________
+# Minimax Search
+
+
+def minimax_decision(state, game):
+    """Given a state in a game, calculate the best move by searching
+    forward all the way to the terminal states. """
+
+    player = game.to_move(state)
+
+    def max_value(state):
+        if game.terminal_test(state):
+            return game.utility(state, player)
+        v = -infinity
+        for a in game.actions(state):
+            v = max(v, min_value(game.result(state, a)))
+        return v
+
+    def min_value(state):
+        if game.terminal_test(state):
+            return game.utility(state, player)
+        v = infinity
+        for a in game.actions(state):
+            v = min(v, max_value(game.result(state, a)))
+        return v
+
+    # Body of minimax_decision:
+    return argmax(game.actions(state),
+                  key=lambda a: min_value(game.result(state, a)))
 
 # ______________________________________________________________________________
 
@@ -19,27 +48,46 @@ memorization = 0
 def alphabeta_search(state, game):
     """Search game to determine best action; use alpha-beta pruning.
     As in [Figure 5.7], this version searches all the way to the leaves."""
-
+    # return the best move from that state
+    print "alpha beta exploring"
+    print state.board
+    if(state.board in memo):
+        print "no need to go alpha-beta"
+        return memo[state.board]
     player = game.to_move(state)
 
     # Functions used by alphabeta
     def max_value(state, alpha, beta):
+        print "max_value exploring"
+        print state.board
         if game.terminal_test(state):
             return game.utility(state, player)
         v = -infinity
         for a in game.actions(state):
-            v = max(v, min_value(game.result(state, a), alpha, beta))
+            if(a in memo_max and memorization):
+                print("memo max used in " + str(a))
+                v = memo_max[a]
+            else:
+                v = max(v, min_value(game.result(state, a), alpha, beta))
+                memo_max[a] = v
             if v >= beta:
                 return v
             alpha = max(alpha, v)
         return v
 
     def min_value(state, alpha, beta):
+        print "min_value exploring"
+        print state.board
         if game.terminal_test(state):
             return game.utility(state, player)
         v = infinity
         for a in game.actions(state):
-            v = min(v, max_value(game.result(state, a), alpha, beta))
+            if(a in memo_min and memorization):
+                print("memo min used in " + str(a))
+                v = memo_min[a]
+            else:
+                v = min(v, max_value(game.result(state, a), alpha, beta))
+                memo_min[a] = v
             if v <= alpha:
                 return v
             beta = min(beta, v)
@@ -51,15 +99,13 @@ def alphabeta_search(state, game):
     best_action = None
     for a in game.actions(state):
         v = min_value(game.result(state, a), best_score, beta)
-        print "comparing the value v = " + str(v) + " and best_score " + str(best_score)
         if v > best_score:
             best_score = v
             best_action = a
-        print "best score so far is " + str(best_score)
-        print "with action"
-        print best_action
+    print "best action"
+    print best_action
+    memo[state.board] = best_action 
     return best_action
-
 
 # ______________________________________________________________________________
 # Players for Games
@@ -135,15 +181,10 @@ class Game:
         print state
         while True:
             for player in players:
+                print ("player " + state.to_move)
                 move = player(self, state)
-                print "the move chosen by the player " + state.to_move + " " + str(move)
+                print move
                 state = self.result(state, move)
-                print "utility 2 " + str(state.utility)
-                print self.display(state)
-                print ""
-                print ""
-                print ""
-                print ""
                 if self.terminal_test(state):
                     print("end state of the board")
                     self.display(state)
@@ -186,26 +227,8 @@ class NIM(Game):
         return 1
 
 
-Orthogonal_moves = [(1,0),(-1,0),(0,-1),(0,1)]
-# initial_board = (\
-#     (' ',' ',' ',' ','M'),\
-#     (' ',' ','G',' ',' '),\
-#     (' ',' ','M',' ',' '),\
-#     (' ',' ',' ',' ',' '),\
-#     ('M',' ',' ',' ',' '))
-
-# initial_board = (\
-#     (' ',' ',' ',' ',' '),\
-#     (' ','M','G','M',' '),\
-#     (' ',' ','M',' ',' '),\
-#     (' ',' ',' ',' ',' '),\
-#     (' ',' ',' ',' ',' '))
-initial_board = (\
-    ('M',' ','G',' ','M'),\
-    (' ',' ','G',' ',' '),\
-    (' ',' ','M',' ','G'),\
-    (' ',' ',' ',' ',' '),\
-    (' ',' ',' ',' ',' '))
+Diagonal_moves = [(1,0),(-1,0),(0,-1),(0,1)]
+initial_board = (('G','G','G','G','M'),('G','G','G','G','G'),('G','G','M','G','G'),('G','G','G','G','G'),('M','G','G','G','G'))
 
 class ThreeMusketeers(Game):
     def __init__(self, h = 5, w = 5):
@@ -215,9 +238,6 @@ class ThreeMusketeers(Game):
         self.Musketeers_positions = []
 
     def terminal_state(self, state):
-        # a guardman can never bring the game to an end in his move
-        #terminal state to be cut short accordingly
-        #if(state.to_move == 'G'): return 0
         self.Musketeers_positions = []
         for i in state.board:
             for j in state.board[i]:
@@ -227,20 +247,19 @@ class ThreeMusketeers(Game):
         # same row(Guardmen winning)
         if(self.Musketeers_positions[0][0] == self.Musketeers_positions[1][0] and
          self.Musketeers_positions[1][0] == self.Musketeers_positions[2][0]):
-            return 1
+            return 0
         # same column (Gardsmen winning)
         if(self.Musketeers_positions[0][1] == self.Musketeers_positions[1][1] and
          self.Musketeers_positions[1][1] == self.Musketeers_positions[2][1]):
-            return 1
+            return 0
         # no possible move (Musketeers winning)
         for M in self.Musketeers_positions:
-            for posssible_moves in Orthogonal_moves:
-                if(self.withing_board_range(M[0]+posssible_moves[0],M[1]+posssible_moves[1]) and\
-                 state.board[M[0]+posssible_moves[0]][M[1]+posssible_moves[1]] == 'G'):
-                    return 0
-        return 1
+            for posssible_moves in Diagonal_moves:
+                if(state.board[M[0]+posssible_moves[0]][M[1]+posssible_moves[1]] == 'G'):
+                    return 1
+        return 0
     def to_move(self, state):
-        return 'M' if state.to_move == 'G' else 'G'
+        return 'M' if state.to_move == 'G' else 'M'
 
     def withing_board_range(self,x,y):
         return not(x >= self.h or y >= self.w or y < 0 or x < 0)
@@ -254,7 +273,7 @@ class ThreeMusketeers(Game):
         List = []
         if(state.to_move == 'M'):
             for M in self.Musketeers_positions:
-                for posssible_moves in Orthogonal_moves:
+                for posssible_moves in Diagonal_moves:
                     if(self.withing_board_range(M[0]+posssible_moves[0],M[1]+posssible_moves[1]) \
                         and state.board[M[0]+posssible_moves[0]][M[1]+posssible_moves[1]] == 'G'):
                         List.append((M[0],M[1],M[0]+posssible_moves[0],M[1]+posssible_moves[1]))
@@ -263,7 +282,7 @@ class ThreeMusketeers(Game):
         for i  in  range(0,self.h):
             for j in range(0,self.w):
                 if(state.board[i][j] == 'G'):
-                    for (x,y) in Orthogonal_moves:
+                    for (x,y) in Diagonal_moves:
                         if(self.withing_board_range(i+x,j+y) and state.board[i+x][j+y] == ' '):
                             List.append((i,j,i+x,j+y))
         return List
@@ -284,7 +303,7 @@ class ThreeMusketeers(Game):
             board = board + (tuple(r),)
 
         return GameState(to_move=('M' if state.to_move == 'G' else 'G'),
-                         utility=self.compute_utility(board, move,state.to_move),
+                         utility=self.compute_utility(board, move, state.to_move),
                          board=board, moves={})
     def utility(self, state, player):
         """Return the value to player; 1 for win, -1 for loss, 0 otherwise."""
@@ -293,40 +312,20 @@ class ThreeMusketeers(Game):
     def compute_utility(self, board, move, to_move):
         """If 'M' wins with this move, return 1; if 'G' wins return -1; else return 0."""
         # same row(Guardmen winning)
-        print ""
-        print ""
-        print ""
-        print ""
-        self.Musketeers_positions = []
-        for i  in  range(0,self.h):
-            for j in range(0,self.w):
-                if(board[i][j] == 'M'):
-                    self.Musketeers_positions.append((i,j))
-        print self.Musketeers_positions
-        print move
         if(self.Musketeers_positions[0][0] == self.Musketeers_positions[1][0] and
          self.Musketeers_positions[1][0] == self.Musketeers_positions[2][0]):
-            print "this 1 -1"
             return -1
         # same column (Gardsmen winning)
         if(self.Musketeers_positions[0][1] == self.Musketeers_positions[1][1] and
          self.Musketeers_positions[1][1] == self.Musketeers_positions[2][1]):
-            print "this 2 -1"
             return -1
         # no possible move (Musketeers winning)
         for M in self.Musketeers_positions:
-            for posssible_moves in Orthogonal_moves:
+            for posssible_moves in Diagonal_moves:
                 if(self.withing_board_range(M[0]+posssible_moves[0],M[1]+posssible_moves[1]) \
                     and board[M[0]+posssible_moves[0]][M[1]+posssible_moves[1]] == 'G'):
-                    print "this (0)"
                     return 0
-        print "this (1)"
         return 1
-    def display(self, state):
-        print "to move" + state.to_move
-        for r in state.board:
-            print r
-
 # Creating the game instances
 NIM_game = NIM()
 ThreeMusketeers_game = ThreeMusketeers()
