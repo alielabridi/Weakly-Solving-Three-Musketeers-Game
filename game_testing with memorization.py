@@ -12,6 +12,13 @@ memo_max = {}
 memo_min = {}
 memo = {}
 memorization = 1
+initial_board = (\
+    ('G','G','G','G','M'),\
+    ('G','G','G','G','G'),\
+    ('G','G','M','G','G'),\
+    ('G','G','G','G','G'),\
+    ('M','G','G','G','G'))
+initial_state_standard_three_musketeers = GameState(to_move = 'M', utility = 0, board = initial_board, moves = {})
 
 # ______________________________________________________________________________
 
@@ -147,9 +154,9 @@ class Game:
     def __repr__(self):
         return '<{}>'.format(self.__class__.__name__)
 
-    def play_game(self, *players):
+    def play_game(self, initial_state = initial_state_standard_three_musketeers, *players):
         """Play an n-person, move-alternating game."""
-        state = self.initial
+        state = initial_state
         print "initial state of the board"
         for r in state.board:
             print r
@@ -167,7 +174,9 @@ class Game:
                 if self.terminal_test(state):
                     print("end state of the board")
                     self.display(state)
-                    return self.utility(state, self.to_move(self.initial))
+                    return self.utility(state, self.to_move(initial_state))
+
+
 
 class NIM(Game):
     def __init__(self):
@@ -220,18 +229,12 @@ Orthogonal_moves = [(1,0),(-1,0),(0,-1),(0,1)]
 #     (' ',' ','M',' ',' '),\
 #     (' ',' ',' ',' ',' '),\
 #     (' ',' ',' ',' ',' '))
-initial_board = (\
-    ('M',' ','G',' ','M'),\
-    (' ',' ','G',' ',' '),\
-    (' ',' ','G',' ','G'),\
-    (' ',' ','G',' ',' '),\
-    (' ',' ','M',' ',' '))
+
 
 class ThreeMusketeers(Game):
     def __init__(self, h = 5, w = 5):
         self.h = 5
         self.w = 5
-        self.initial = GameState(to_move = 'M', utility = 0, board = initial_board, moves = {})
         self.Musketeers_positions = []
 
     def terminal_state(self, state):
@@ -440,11 +443,79 @@ def test_random_tests():
     # The player 'X' (one who plays first) in TicTacToe never loses:
     #assert ttt.play_game(alphabeta_player, random_player) >= 0
 
+
+def unit_testing():
+    initial_board = (\
+    ('M',' ','G',' ','M'),\
+    (' ',' ','G',' ',' '),\
+    (' ',' ','G',' ','G'),\
+    (' ',' ','G',' ',' '),\
+    (' ',' ','M',' ',' '))
+    initial_state = GameState(to_move = 'M', utility = 0, board = initial_board, moves = {})
+    #Guardmen winning
+    assert(ThreeMusketeers_game.play_game(initial_state,alphabeta_player,alphabeta_player) == -1)
+
+
+    initial_board = (\
+    ('M',' ',' ',' ','G'),\
+    (' ',' ',' ',' ',' '),\
+    ('G','G','G','G','M'),\
+    (' ',' ',' ',' ',' '),\
+    ('M',' ','G',' ',' '))
+    initial_state = GameState(to_move = 'M', utility = 0, board = initial_board, moves = {})
+    #Guardmen winning
+    assert(ThreeMusketeers_game.play_game(initial_state,alphabeta_player,alphabeta_player) == -1)
+
+    initial_board = (\
+    (' ',' ',' ',' ','M'),\
+    (' ',' ','G',' ',' '),\
+    (' ',' ','M',' ',' '),\
+    (' ',' ',' ',' ',' '),\
+    ('M',' ',' ',' ',' '))
+    initial_state = GameState(to_move = 'M', utility = 0, board = initial_board, moves = {})
+    #Musketeers winning
+    assert(ThreeMusketeers_game.play_game(initial_state,alphabeta_player,alphabeta_player) == 1)
+
+    initial_board = (\
+        (' ',' ',' ',' ',' '),\
+        (' ','M','G','M',' '),\
+        (' ',' ','M',' ',' '),\
+        (' ',' ',' ',' ',' '),\
+        (' ',' ',' ',' ',' '))
+    initial_state = GameState(to_move = 'M', utility = 0, board = initial_board, moves = {})
+    #Musketeers winning
+    assert(ThreeMusketeers_game.play_game(initial_state,alphabeta_player,alphabeta_player) == 1)
+
+    initial_board = (\
+    (' ',' ',' ',' ','G'),\
+    (' ',' ','M',' ',' '),\
+    (' ',' ','M',' ',' '),\
+    ('M','G','G',' ',' '),\
+    (' ',' ',' ',' ',' '))
+    initial_state = GameState(to_move = 'M', utility = 0, board = initial_board, moves = {})
+    #Musketeers winning
+    assert(ThreeMusketeers_game.play_game(initial_state,alphabeta_player,alphabeta_player) == 1)
+
+    initial_board = (\
+    (' ',' ','M',' ','G'),\
+    (' ','G',' ','G',' '),\
+    ('M',' ','G',' ',' '),\
+    ('M','G',' ',' ',' '),\
+    (' ',' ','G',' ',' '))
+    initial_state = GameState(to_move = 'M', utility = 0, board = initial_board, moves = {})
+    #Musketeers winning
+    assert(ThreeMusketeers_game.play_game(initial_state,alphabeta_player,alphabeta_player) == 1)
+
+    print "All unit tests succeeded"
+
+
+
+
 #test_random_tests()
 print("Starting the program...")
-
+unit_testing()
 #stateNIM = GameState(to_move='0', utility=0, board=[20,2,1], moves=[])
 #print ("winner is " + str(NIM_game.play_game(alphabeta_player,alphabeta_player)))
-print ("winner is " + str(ThreeMusketeers_game.play_game(alphabeta_player,alphabeta_player)))
+#print ("winner is " + str(ThreeMusketeers_game.play_game(initial_state_standard_three_musketeers,alphabeta_player,alphabeta_player)))
 #print alphabeta_search(stateNIM,NIM_game)
 #NIM_game.play_game(alphabeta_search(stateNIM, NIM_game),query_player )
