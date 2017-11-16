@@ -270,24 +270,24 @@ class ThreeMusketeers(Game):
             for j in range(0,self.w):
                 if(state.board[i][j] == 'M'):
                     self.Musketeers_positions.append((i,j))
-                    
+
         # same row(Guardmen winning)
         if(self.Musketeers_positions[0][0] == self.Musketeers_positions[1][0] and
          self.Musketeers_positions[1][0] == self.Musketeers_positions[2][0]):
-            print("terminal: same row happened")
+            #print("terminal: same row happened")
             return 1
         # same column (Gardsmen winning)
         if(self.Musketeers_positions[0][1] == self.Musketeers_positions[1][1] and
          self.Musketeers_positions[1][1] == self.Musketeers_positions[2][1]):
-            print("terminal: same column happened")
+            #print("terminal: same column happened")
             return 1
         # no possible move (Musketeers winning)
-        for M in self.Musketeers_positions:
-            for posssible_moves in Orthogonal_moves:
-                if(self.withing_board_range(M[0]+posssible_moves[0],M[1]+posssible_moves[1]) and\
-                 state.board[M[0]+posssible_moves[0]][M[1]+posssible_moves[1]] == 'G'):
+        for (x,y) in self.Musketeers_positions:
+            for (i,j) in Orthogonal_moves:
+                if(self.withing_board_range(x+i,y+j) and\
+                 state.board[x+i][y+j] == 'G'):
                     return 0
-        print("No more moves for the Musketeers")
+        #print("No more moves for the Musketeers")
         return 1
     def to_move(self, state):
         return state.to_move
