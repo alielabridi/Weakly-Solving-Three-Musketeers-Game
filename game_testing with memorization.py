@@ -101,11 +101,11 @@ def alphabeta_search(state, game):
         #print "with action"
         #for r in best_action:
         #    print r
-    print "-----"
-    print "utility = " + str(best_score)
+    print ("-----")
+    print ("utility = " + str(best_score))
     for r in best_action:
-        print r
-    print "-----"
+        print (r)
+    print ("-----")
     return best_action
 
 
@@ -163,7 +163,9 @@ class Game:
 
     def terminal_test(self, state):
         """Return True if this is a final state for the game."""
-        return not self.actions(state)
+        #return not self.actions(state)
+        raise NotImplementedError
+        
 
     def to_move(self, state):
         """Return the player whose move it is in this state."""
@@ -179,9 +181,9 @@ class Game:
     def play_game(self, initial_state = initial_state_standard_three_musketeers, *players):
         """Play an n-person, move-alternating game."""
         state = initial_state
-        print "initial state of the board"
+        print ("initial state of the board")
         for r in state.board:
-            print r
+            print (r)
         while True:
             for player in players:
                 move = player(self, state)
@@ -259,23 +261,25 @@ class ThreeMusketeers(Game):
         self.w = 5
         self.Musketeers_positions = []
 
-    def terminal_state(self, state):
+    def terminal_test(self, state):
         # a guardman can never bring the game to an end in his move
         #terminal state to be cut short accordingly
         #if(state.to_move == 'G'): return 0
         self.Musketeers_positions = []
-        for i in state.board:
-            for j in state.board[i]:
+        for i  in  range(0,self.h):
+            for j in range(0,self.w):
                 if(state.board[i][j] == 'M'):
                     self.Musketeers_positions.append((i,j))
-
+                    
         # same row(Guardmen winning)
         if(self.Musketeers_positions[0][0] == self.Musketeers_positions[1][0] and
          self.Musketeers_positions[1][0] == self.Musketeers_positions[2][0]):
+            print("terminal: same row happened")
             return 1
         # same column (Gardsmen winning)
         if(self.Musketeers_positions[0][1] == self.Musketeers_positions[1][1] and
          self.Musketeers_positions[1][1] == self.Musketeers_positions[2][1]):
+            print("terminal: same column happened")
             return 1
         # no possible move (Musketeers winning)
         for M in self.Musketeers_positions:
@@ -283,6 +287,7 @@ class ThreeMusketeers(Game):
                 if(self.withing_board_range(M[0]+posssible_moves[0],M[1]+posssible_moves[1]) and\
                  state.board[M[0]+posssible_moves[0]][M[1]+posssible_moves[1]] == 'G'):
                     return 0
+        print("No more moves for the Musketeers")
         return 1
     def to_move(self, state):
         return state.to_move
@@ -340,7 +345,7 @@ class ThreeMusketeers(Game):
                             board = board + (tuple(r),)
                         List.append(board)
 
-        else:
+        elif(state.to_move == 'G'):
             for i  in  range(0,self.h):
                 for j in range(0,self.w):
                     if(state.board[i][j] == 'G'):
@@ -402,7 +407,7 @@ class ThreeMusketeers(Game):
 
     def display(self, state):
         for r in state.board:
-            print r
+            print (r)
 
 # Creating the game instances
 NIM_game = NIM()
@@ -508,6 +513,18 @@ def unit_testing():
     #Musketeers winning
     assert(ThreeMusketeers_game.play_game(initial_state,alphabeta_player,alphabeta_player) == 1)
 
+
+
+    initial_board = (\
+        (' ',' ',' ',' ',' '),\
+        (' ',' ',' ',' ',' '),\
+        (' ',' ',' ',' ',' '),\
+        (' ',' ','M',' ',' '),\
+        ('M',' ','G',' ','M'))
+    initial_state = GameState(to_move = 'M', utility = 0, board = initial_board, moves = {})
+    #Musketeers winning
+    assert(ThreeMusketeers_game.play_game(initial_state,alphabeta_player,alphabeta_player) == -1)
+
     initial_board = (\
     (' ',' ',' ',' ','G'),\
     (' ',' ','M',' ',' '),\
@@ -528,34 +545,43 @@ def unit_testing():
     #Musketeers winning
     assert(ThreeMusketeers_game.play_game(initial_state,alphabeta_player,alphabeta_player) == 1)
 
-    print "All unit tests succeeded"
+    print ("All unit tests succeeded")
 
 
-
-
-#test_random_tests()
-print("Starting the program...")
-start = time.time()
-unit_testing()
-print "(UNIT TESTING) used memorization in memo_max #=" + str(count)
-print "(UNIT TESTING) used memorization in memo_min #=" + str(count2)
-print "(UNIT TESTING) maximum depth max_depth_maximizer = " + str(max_depth_maximizer)
-print "(UNIT TESTING) maximum depth max_depth_minimizer = " + str(max_depth_minimizer)
-end = time.time()
-print("execution time for unit testing: " + str(end - start))
-count = 0
-count2 = 0
-max_depth_maximizer = 0
-max_depth_minimizer = 0
-#stateNIM = GameState(to_move='0', utility=0, board=[20,2,1], moves=[])
-#print ("winner is " + str(NIM_game.play_game(alphabeta_player,alphabeta_player)))
-start = time.time()
-print ("winner is " + str(ThreeMusketeers_game.play_game(initial_state_standard_three_musketeers,alphabeta_player,alphabeta_player)))
-print "used memorization in memo_max #=" + str(count)
-print "used memorization in memo_min #=" + str(count2)
-print "maximum depth max_depth_maximizer = " + str(max_depth_maximizer)
-print "maximum depth max_depth_minimizer = " + str(max_depth_minimizer)
-end = time.time()
-print("execution time for getting the result: " + str(end - start))
-#print alphabeta_search(stateNIM,NIM_game)
-#NIM_game.play_game(alphabeta_search(stateNIM, NIM_game),query_player )
+def main():
+    #test_random_tests()
+    print("Starting the program...")
+    initial_board = (\
+    ('G', ' ', 'G', 'G', 'G'),\
+    (' ', ' ', ' ', ' ', 'G'),\
+    (' ', ' ', 'M', 'G', ' '),\
+    (' ', 'G', ' ', ' ', ' '),\
+    ('G', ' ', 'M', 'M', 'G'))
+    initial_state = GameState(to_move = 'G', utility = 0, board = initial_board, moves = {})
+    print(ThreeMusketeers_game.play_game(initial_state,alphabeta_player,alphabeta_player) == 1)
+    return
+    start = time.time()
+    unit_testing()
+    print ("(UNIT TESTING) used memorization in memo_max #=" + str(count))
+    print ("(UNIT TESTING) used memorization in memo_min #=" + str(count2))
+    print ("(UNIT TESTING) maximum depth max_depth_maximizer = " + str(max_depth_maximizer))
+    print ("(UNIT TESTING) maximum depth max_depth_minimizer = " + str(max_depth_minimizer))
+    end = time.time()
+    print("execution time for unit testing: " + str(end - start))
+    count = 0
+    count2 = 0
+    max_depth_maximizer = 0
+    max_depth_minimizer = 0
+    #stateNIM = GameState(to_move='0', utility=0, board=[20,2,1], moves=[])
+    #print ("winner is " + str(NIM_game.play_game(alphabeta_player,alphabeta_player)))
+    start = time.time()
+    print ("winner is " + str(ThreeMusketeers_game.play_game(initial_state_standard_three_musketeers,alphabeta_player,alphabeta_player)))
+    print ("used memorization in memo_max #=" + str(count))
+    print ("used memorization in memo_min #=" + str(count2))
+    print ("maximum depth max_depth_maximizer = " + str(max_depth_maximizer))
+    print ("maximum depth max_depth_minimizer = " + str(max_depth_minimizer))
+    end = time.time()
+    print("execution time for getting the result: " + str(end - start))
+    #print alphabeta_search(stateNIM,NIM_game)
+    #NIM_game.play_game(alphabeta_search(stateNIM, NIM_game),query_player )
+main()
