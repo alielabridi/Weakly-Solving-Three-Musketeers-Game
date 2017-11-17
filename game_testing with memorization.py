@@ -98,7 +98,7 @@ def alphabeta_search(state, game):
             count_memo_minimizer_max_value = count_memo_minimizer_max_value + 1
             #print "used memorization in memo_minimizer_min_value #=" + str(count_memo_minimizer_min_value)
             return memo_minimizer_max_value[state.board]
-            
+
         for a in game.actions(state):
             v = max(v, min_value(game.result(state, a), alpha, beta,depth+1))        
             if v >= beta:
@@ -654,14 +654,13 @@ def main():
     print("execution time for unit testing: " + str(end - start))
     #stateNIM = GameState(to_move='0', utility=0, board=[20,2,1], moves=[])
     #print ("winner is " + str(NIM_game.play_game(alphabeta_player,alphabeta_player)))
+    reinitiliaze_vars()
     start = time.time()
     print ("winner is " + str(ThreeMusketeers_game.play_game(initial_state_standard_three_musketeers,alphabeta_player,alphabeta_player)))
-    print ("used memorization in memo_max #=" + str(count_memo_max))
-    print ("used memorization in memo_min #=" + str(count_memo_min))
-    print ("maximum depth max_depth_maximizer = " + str(max_depth_maximizer))
-    print ("maximum depth max_depth_minimizer = " + str(max_depth_minimizer))
     end = time.time()
     print("execution time for getting the result: " + str(end - start))
+    print_info_vars()
+
     #print alphabeta_search(stateNIM,NIM_game)
     #NIM_game.play_game(alphabeta_search(stateNIM, NIM_game),query_player )
 
