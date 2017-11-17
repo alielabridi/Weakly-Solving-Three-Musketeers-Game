@@ -9,12 +9,15 @@ import time
 
 infinity = float('inf')
 GameState = namedtuple('GameState', 'to_move, utility, board, moves')
-memo_max = {}
-memo_min = {}
-memo = {}
-memorization = 1    
-count = 0
-count2 = 0
+memo_maximizer_max_value = {}
+memo_maximizer_min_value = {}
+memo_minimizer_max_value = {}
+memo_minimizer_min_value = {}
+memorization = 0
+count_memo_minimizer_max_value = 0
+count_memo_minimizer_min_value = 0
+count_memo_maximizer_max_value = 0
+count_memo_maximizer_min_value = 0
 max_depth_maximizer = 0
 max_depth_minimizer = 0
 initial_board = (\
@@ -36,8 +39,13 @@ def alphabeta_search(state, game):
 
     # Functions used by alphabeta
     def max_value(state, alpha, beta,depth):
-        global count
+        global count_memo_maximizer_max_value
+        global count_memo_minimizer_max_value
+        global max_depth_minimizer
         global max_depth_maximizer
+        global memo_maximizer_max_value
+        global memo_minimizer_max_value
+
         #print "depth in max: " + str(depth) 
         if game.terminal_test(state):
             # print "--------------------"
@@ -47,23 +55,43 @@ def alphabeta_search(state, game):
             # print "--------------------"
             return game.utility(state, player)
         v = -infinity
+        player_about_to_move = 'M' if state.to_move == 'G' else 'G'
+        if(player_about_to_move == 'M' and state.board in memo_maximizer_max_value and memorization):
+            count_memo_maximizer_max_value = count_memo_maximizer_max_value + 1
+            #print "used memorization in memo_maximizer_max_value #=" + str(count_memo_maximizer_max_value)
+            return memo_maximizer_max_value[state.board]
+        elif(player_about_to_move == 'G' and state.board in memo_minimizer_max_value and memorization):
+            count_memo_minimizer_max_value = count_memo_minimizer_max_value + 1
+            #print "used memorization in memo_minimizer_min_value #=" + str(count_memo_minimizer_min_value)
+            return memo_minimizer_min_value[state.board]
         for a in game.actions(state):
-            if(a in memo_max and memorization):
-                count = count + 1
-                #print "used memorization in memo_max #=" + str(count)
-                return memo_max[a]
-            else:
-                max_depth_maximizer = max(depth+1,max_depth_maximizer)
-                v = max(v, min_value(game.result(state, a), alpha, beta,depth+1))
-                memo_max[a] = v
+            v = max(v, min_value(game.result(state, a), alpha, beta,depth+1))        
             if v >= beta:
+                print("alpha beta prunning used")
+                if(player_about_to_move == 'M' and memorization): 
+                    max_depth_maximizer = max(depth+1,max_depth_maximizer)
+                    memo_maximizer_max_value[state.board] = v
+                elif(player_about_to_move == 'G' and memorization):
+                    max_depth_minimizer = max(depth+1, max_depth_minimizer)
+                    memo_minimizer_max_value[state.board] = v
                 return v
             alpha = max(alpha, v)
+        if(player_about_to_move == 'M' and memorization): 
+            max_depth_maximizer = max(depth+1,max_depth_maximizer)
+            memo_maximizer_max_value[state.board] = v
+        elif(player_about_to_move == 'G' and memorization):
+            max_depth_minimizer = max(depth+1, max_depth_minimizer)
+            memo_minimizer_max_value[state.board] = v
         return v
 
     def min_value(state, alpha, beta,depth):
+        global count_memo_maximizer_min_value
+        global count_memo_minimizer_min_value
         global max_depth_minimizer
-        global count2
+        global max_depth_maximizer
+        global memo_maximizer_min_value
+        global memo_minimizer_min_value
+
         #print "depth in min: " + str(depth) 
         if game.terminal_test(state):
             # print "--------------------"
@@ -73,18 +101,35 @@ def alphabeta_search(state, game):
             # print "--------------------"
             return game.utility(state, player)
         v = infinity
+        player_about_to_move = 'M' if state.to_move == 'G' else 'G'
+        if(player_about_to_move == 'M' and state.board in memo_maximizer_min_value and memorization):
+            count_memo_maximizer_min_value = count_memo_maximizer_min_value + 1
+            #print "used memorization in memo_maximizer_min_value #=" + str(count_memo_maximizer_min_value)
+            return memo_maximizer_min_value[state.board]
+        elif(player_about_to_move == 'G' and state.board in memo_minimizer_min_value and memorization):
+            count_memo_minimizer_min_value = count_memo_minimizer_min_value + 1
+            #print "used memorization in memo_minimizer_min_value #=" + str(count_memo_minimizer_min_value)
+            return memo_minimizer_min_value[state.board]
+
         for a in game.actions(state):
-            if(a in memo_min and memorization):
-                count2 = count2 + 1
-                #print "used memorization in memo_min " + str(count2)
-                return memo_min[a]
-            else:
-                max_depth_minimizer = max(depth+1,max_depth_minimizer)
-                v = min(v, max_value(game.result(state, a), alpha, beta,depth+1))
-                memo_min[a] = v
+            v = min(v, max_value(game.result(state, a), alpha, beta,depth+1))
             if v <= alpha:
+                print("alpha beta prunning used")
+                if(player_about_to_move == 'M' and memorization): 
+                    max_depth_maximizer = max(depth+1,max_depth_maximizer)
+                    memo_maximizer_min_value[state.board] = v
+                elif(player_about_to_move == 'G' and memorization):
+                    max_depth_minimizer = max(depth+1, max_depth_minimizer)
+                    memo_minimizer_min_value[state.board] = v
                 return v
             beta = min(beta, v)
+
+        if(player_about_to_move == 'M' and memorization): 
+            max_depth_maximizer = max(depth+1,max_depth_maximizer)
+            memo_maximizer_min_value[state.board] = v
+        elif(player_about_to_move == 'G' and memorization):
+            max_depth_minimizer = max(depth+1, max_depth_minimizer)
+            memo_minimizer_min_value[state.board] = v
         return v
 
     # Body of alphabeta_cutoff_search:
@@ -93,16 +138,17 @@ def alphabeta_search(state, game):
     best_action = None
     for a in game.actions(state):
         v = min_value(game.result(state, a), best_score, beta,0)
-        #print "comparing the value v = " + str(v) + " and best_score " + str(best_score)
+        print ("comparing the value v = " + str(v) + " and best_score " + str(best_score))
+        print ("with action")
+        for r in a:
+            print (r)
+        
         if v > best_score:
             best_score = v
             best_action = a
         #print "best score so far is " + str(best_score)
-        #print "with action"
-        #for r in best_action:
-        #    print r
     print ("-----")
-    print ("utility = " + str(best_score))
+    print ("to_move " + player + " utility = " + str(best_score))
     for r in best_action:
         print (r)
     print ("-----")
@@ -271,22 +317,28 @@ class ThreeMusketeers(Game):
                 if(state.board[i][j] == 'M'):
                     self.Musketeers_positions.append((i,j))
 
+        value = 0
+        still_move = 0
         # same row(Guardmen winning)
         if(self.Musketeers_positions[0][0] == self.Musketeers_positions[1][0] and
          self.Musketeers_positions[1][0] == self.Musketeers_positions[2][0]):
             #print("terminal: same row happened")
-            return 1
+            value = -1
         # same column (Gardsmen winning)
         if(self.Musketeers_positions[0][1] == self.Musketeers_positions[1][1] and
          self.Musketeers_positions[1][1] == self.Musketeers_positions[2][1]):
             #print("terminal: same column happened")
-            return 1
+            value = -1
         # no possible move (Musketeers winning)
         for (x,y) in self.Musketeers_positions:
             for (i,j) in Orthogonal_moves:
                 if(self.withing_board_range(x+i,y+j) and\
                  state.board[x+i][y+j] == 'G'):
-                    return 0
+                    still_move = 1
+        print ("value " + str(value))
+        print ("still_move " + str(still_move))
+        if(value): return -1
+        if(still_move): return 0
         #print("No more moves for the Musketeers")
         return 1
     def to_move(self, state):
@@ -330,20 +382,22 @@ class ThreeMusketeers(Game):
         # for r in board:
         #     lstboard.append(list(r))
         if(state.to_move == 'M'):
-            for M in self.Musketeers_positions:
-                for posssible_moves in Orthogonal_moves:
-                    if(self.withing_board_range(M[0]+posssible_moves[0],M[1]+posssible_moves[1]) \
-                        and state.board[M[0]+posssible_moves[0]][M[1]+posssible_moves[1]] == 'G'):
+            for (x,y) in self.Musketeers_positions:
+                for (i,j) in Orthogonal_moves:
+                    if(self.withing_board_range(x+i,y+j) \
+                        and state.board[x+i][y+j] == 'G'):
                         board = deepcopy(state.board)
                         lstboard = []
                         for r in board:
                             lstboard.append(list(r))
-                        lstboard[M[0]][M[1]] = ' '
-                        lstboard[M[0]+posssible_moves[0]][M[1]+posssible_moves[1]] = 'M'
+                        lstboard[x][y] = ' '
+                        lstboard[x+i][y+j] = 'M'
                         board = ()
                         for r in lstboard:
                             board = board + (tuple(r),)
                         List.append(board)
+                        print("the number of possible moves: " + str(len(List)))
+                        print ("the moves are " + str(List))
 
         elif(state.to_move == 'G'):
             for i  in  range(0,self.h):
@@ -374,35 +428,35 @@ class ThreeMusketeers(Game):
 
     def compute_utility(self, board, move, to_move):
         """If 'M' wins with this move, return 1; if 'G' wins return -1; else return 0."""
-        # same row(Guardmen winning)
-        #print ""
-        #print ""
-        #print ""
-        #print ""
         self.Musketeers_positions = []
         for i  in  range(0,self.h):
             for j in range(0,self.w):
                 if(board[i][j] == 'M'):
                     self.Musketeers_positions.append((i,j))
+        print ("position of Musketeers" + str(self.Musketeers_positions))
         #print self.Musketeers_positions
+        # same row(Guardmen winning)
         if(self.Musketeers_positions[0][0] == self.Musketeers_positions[1][0] and
          self.Musketeers_positions[1][0] == self.Musketeers_positions[2][0]):
-            #print "this 1 -1"
+            print("same row detected")
             return -1
         # same column (Gardsmen winning)
         if(self.Musketeers_positions[0][1] == self.Musketeers_positions[1][1] and
          self.Musketeers_positions[1][1] == self.Musketeers_positions[2][1]):
             #print "this 2 -1"
+            print("same column detected")
             return -1
-        # no possible move (Musketeers winning)
-        for M in self.Musketeers_positions:
-            for posssible_moves in Orthogonal_moves:
-                if(self.withing_board_range(M[0]+posssible_moves[0],M[1]+posssible_moves[1]) \
-                    and board[M[0]+posssible_moves[0]][M[1]+posssible_moves[1]] == 'G'):
+        #still possible moves (nobody wins yet!)
+        for (x,y) in self.Musketeers_positions:
+            for (i,j) in Orthogonal_moves:
+                if(self.withing_board_range(x+i,y+j) \
+                    and board[x+i][y+j] == 'G'):
                     #print "this (0)"
                     return 0
         #print "this (1)"
         #print to_move
+        # no possible move (Musketeers winning)
+        print("no possible moves detected")
         return 1
 
     def display(self, state):
@@ -472,6 +526,19 @@ def test_random_tests():
 
 
 def unit_testing():
+    print("+++++++++++++++++++++")
+    initial_board = (\
+    ('M',' ','G',' ','M'),\
+    (' ',' ','G',' ',' '),\
+    (' ',' ','G',' ','G'),\
+    (' ',' ','M',' ',' '),\
+    (' ',' ',' ',' ',' '))
+    initial_state = GameState(to_move = 'M', utility = 0, board = initial_board, moves = {})
+    #Guardmen winning
+    print(ThreeMusketeers_game.play_game(initial_state,alphabeta_player,alphabeta_player) == -1)
+    return 
+
+    print("+++++++++++++++++++++")
     initial_board = (\
     ('M',' ','G',' ','M'),\
     (' ',' ','G',' ',' '),\
@@ -482,7 +549,7 @@ def unit_testing():
     #Guardmen winning
     assert(ThreeMusketeers_game.play_game(initial_state,alphabeta_player,alphabeta_player) == -1)
 
-
+    print("+++++++++++++++++++++")
     initial_board = (\
     ('M',' ',' ',' ','G'),\
     (' ',' ',' ',' ',' '),\
@@ -493,6 +560,7 @@ def unit_testing():
     #Guardmen winning
     assert(ThreeMusketeers_game.play_game(initial_state,alphabeta_player,alphabeta_player) == -1)
 
+    print("+++++++++++++++++++++")
     initial_board = (\
     (' ',' ',' ',' ','M'),\
     (' ',' ','G',' ',' '),\
@@ -503,6 +571,7 @@ def unit_testing():
     #Musketeers winning
     assert(ThreeMusketeers_game.play_game(initial_state,alphabeta_player,alphabeta_player) == 1)
 
+    print("+++++++++++++++++++++")
     initial_board = (\
         (' ',' ',' ',' ',' '),\
         (' ','M','G','M',' '),\
@@ -515,6 +584,7 @@ def unit_testing():
 
 
 
+    print("+++++++++++++++++++++")
     initial_board = (\
         (' ',' ',' ',' ',' '),\
         (' ',' ',' ',' ',' '),\
@@ -525,6 +595,7 @@ def unit_testing():
     #Musketeers winning
     assert(ThreeMusketeers_game.play_game(initial_state,alphabeta_player,alphabeta_player) == -1)
 
+    print("+++++++++++++++++++++")
     initial_board = (\
     (' ',' ',' ',' ','G'),\
     (' ',' ','M',' ',' '),\
@@ -535,6 +606,7 @@ def unit_testing():
     #Musketeers winning
     assert(ThreeMusketeers_game.play_game(initial_state,alphabeta_player,alphabeta_player) == 1)
 
+    print("+++++++++++++++++++++")
     initial_board = (\
     (' ',' ','M',' ','G'),\
     (' ','G',' ','G',' '),\
@@ -551,6 +623,9 @@ def unit_testing():
 def main():
     #test_random_tests()
     print("Starting the program...")
+    unit_testing()
+    return
+    print("+++++++++++++++++++++")
     initial_board = (\
     ('G', ' ', 'G', 'G', 'G'),\
     (' ', ' ', ' ', ' ', 'G'),\
@@ -558,26 +633,24 @@ def main():
     (' ', 'G', ' ', ' ', ' '),\
     ('G', ' ', 'M', 'M', 'G'))
     initial_state = GameState(to_move = 'G', utility = 0, board = initial_board, moves = {})
-    print(ThreeMusketeers_game.play_game(initial_state,alphabeta_player,alphabeta_player) == 1)
-    return
+    print(ThreeMusketeers_game.play_game(initial_state,alphabeta_player,alphabeta_player))
     start = time.time()
-    unit_testing()
-    print ("(UNIT TESTING) used memorization in memo_max #=" + str(count))
-    print ("(UNIT TESTING) used memorization in memo_min #=" + str(count2))
+    print ("(UNIT TESTING) used memorization in memo_max #=" + str(count_memo_max))
+    print ("(UNIT TESTING) used memorization in memo_min #=" + str(count_memo_min))
     print ("(UNIT TESTING) maximum depth max_depth_maximizer = " + str(max_depth_maximizer))
     print ("(UNIT TESTING) maximum depth max_depth_minimizer = " + str(max_depth_minimizer))
     end = time.time()
     print("execution time for unit testing: " + str(end - start))
-    count = 0
-    count2 = 0
+    count_memo_max = 0
+    count_memo_min = 0
     max_depth_maximizer = 0
     max_depth_minimizer = 0
     #stateNIM = GameState(to_move='0', utility=0, board=[20,2,1], moves=[])
     #print ("winner is " + str(NIM_game.play_game(alphabeta_player,alphabeta_player)))
     start = time.time()
     print ("winner is " + str(ThreeMusketeers_game.play_game(initial_state_standard_three_musketeers,alphabeta_player,alphabeta_player)))
-    print ("used memorization in memo_max #=" + str(count))
-    print ("used memorization in memo_min #=" + str(count2))
+    print ("used memorization in memo_max #=" + str(count_memo_max))
+    print ("used memorization in memo_min #=" + str(count_memo_min))
     print ("maximum depth max_depth_maximizer = " + str(max_depth_maximizer))
     print ("maximum depth max_depth_minimizer = " + str(max_depth_minimizer))
     end = time.time()
