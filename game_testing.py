@@ -22,6 +22,7 @@ count_alpha_prunning = 0
 count_beta_prunning = 0
 max_depth_maximizer = 0
 max_depth_minimizer = 0
+printing_interval = 600
 initial_board = (\
     ('G','G','G','G','M'),\
     ('G','G','G','G','G'),\
@@ -30,6 +31,7 @@ initial_board = (\
     ('M','G','G','G','G'))
 initial_state_standard_three_musketeers = GameState(to_move = 'M', utility = 0, board = initial_board, moves = {})
 startprint = time.time()
+start = time.time()
 
 
 def reinitiliaze_vars():
@@ -60,21 +62,27 @@ def print_info_vars():
     print ("memo_maximizer_min_value = " + str(len(memo_maximizer_min_value)))
     print ("memo_minimizer_max_value = " + str(len(memo_minimizer_max_value)))
     print ("memo_minimizer_min_value = " + str(len(memo_minimizer_min_value)))
+    print("time spent: " + str(time.time() - start))
 # ______________________________________________________________________________
 
 def max(a,b):
     return a if a>b else b
 
 def alphabeta_search(state, game):
-    if(time.time() - startprint > 3600):
-        startprint = time.time()
-        print_info_vars()
     """Search game to determine best action; use alpha-beta pruning.
     As in [Figure 5.7], this version searches all the way to the leaves."""
     player = game.to_move(state)
 
     # Functions used by alphabeta
     def max_value(state, alpha, beta,depth):
+
+        global startprint
+        global printing_interval
+        if(time.time() - startprint > printing_interval):
+            startprint = time.time()
+            print_info_vars()
+
+
         global count_memo_maximizer_max_value
         global count_memo_minimizer_max_value
         global max_depth_minimizer
@@ -95,13 +103,13 @@ def alphabeta_search(state, game):
         player_about_to_move = 'M' if state.to_move == 'G' else 'G'
         if(player_about_to_move == 'M' and state.board in memo_maximizer_max_value and memorization):
             count_memo_maximizer_max_value = count_memo_maximizer_max_value + 1
-            print("memo used")
+            #print("memo used")
 
             #print "used memorization in memo_maximizer_max_value #= " + str(count_memo_maximizer_max_value)
             return memo_maximizer_max_value[state.board]
         elif(player_about_to_move == 'G' and state.board in memo_minimizer_max_value and memorization):
             count_memo_minimizer_max_value = count_memo_minimizer_max_value + 1
-            print("memo used")
+            #print("memo used")
 
             #print "used memorization in memo_minimizer_min_value #=" + str(count_memo_minimizer_min_value)
             return memo_minimizer_max_value[state.board]
@@ -127,6 +135,14 @@ def alphabeta_search(state, game):
         return v
 
     def min_value(state, alpha, beta,depth):
+
+        global startprint
+        global printing_interval
+        if(time.time() - startprint > printing_interval):
+            startprint = time.time()
+            print_info_vars()
+
+
         global count_memo_maximizer_min_value
         global count_memo_minimizer_min_value
         global max_depth_minimizer
@@ -147,12 +163,12 @@ def alphabeta_search(state, game):
         player_about_to_move = 'M' if state.to_move == 'G' else 'G'
         if(player_about_to_move == 'M' and state.board in memo_maximizer_min_value and memorization):
             count_memo_maximizer_min_value = count_memo_maximizer_min_value + 1
-            print("memo used")
+            #print("memo used")
             #print "used memorization in memo_maximizer_min_value #=" + str(count_memo_maximizer_min_value)
             return memo_maximizer_min_value[state.board]
         elif(player_about_to_move == 'G' and state.board in memo_minimizer_min_value and memorization):
             count_memo_minimizer_min_value = count_memo_minimizer_min_value + 1
-            print("memo used")
+            #print("memo used")
             #print "used memorization in memo_minimizer_min_value #=" + str(count_memo_minimizer_min_value)
             return memo_minimizer_min_value[state.board]
 
