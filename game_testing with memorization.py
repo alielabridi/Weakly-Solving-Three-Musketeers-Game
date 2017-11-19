@@ -29,6 +29,7 @@ initial_board = (\
     ('G','G','G','G','G'),\
     ('M','G','G','G','G'))
 initial_state_standard_three_musketeers = GameState(to_move = 'M', utility = 0, board = initial_board, moves = {})
+start = time.time()
 
 
 def reinitiliaze_vars():
@@ -36,7 +37,6 @@ def reinitiliaze_vars():
     memo_maximizer_min_value = {}
     memo_minimizer_max_value = {}
     memo_minimizer_min_value = {}
-    memorization = 0
     count_memo_minimizer_max_value = 0
     count_memo_minimizer_min_value = 0
     count_memo_maximizer_max_value = 0
@@ -66,6 +66,8 @@ def max(a,b):
     return a if a>b else b
 
 def alphabeta_search(state, game):
+    if(time.time() - start > 3600):
+        print_info_vars()
     """Search game to determine best action; use alpha-beta pruning.
     As in [Figure 5.7], this version searches all the way to the leaves."""
     player = game.to_move(state)
@@ -92,10 +94,14 @@ def alphabeta_search(state, game):
         player_about_to_move = 'M' if state.to_move == 'G' else 'G'
         if(player_about_to_move == 'M' and state.board in memo_maximizer_max_value and memorization):
             count_memo_maximizer_max_value = count_memo_maximizer_max_value + 1
+            print("memo used")
+
             #print "used memorization in memo_maximizer_max_value #= " + str(count_memo_maximizer_max_value)
             return memo_maximizer_max_value[state.board]
         elif(player_about_to_move == 'G' and state.board in memo_minimizer_max_value and memorization):
             count_memo_minimizer_max_value = count_memo_minimizer_max_value + 1
+            print("memo used")
+
             #print "used memorization in memo_minimizer_min_value #=" + str(count_memo_minimizer_min_value)
             return memo_minimizer_max_value[state.board]
 
@@ -140,10 +146,12 @@ def alphabeta_search(state, game):
         player_about_to_move = 'M' if state.to_move == 'G' else 'G'
         if(player_about_to_move == 'M' and state.board in memo_maximizer_min_value and memorization):
             count_memo_maximizer_min_value = count_memo_maximizer_min_value + 1
+            print("memo used")
             #print "used memorization in memo_maximizer_min_value #=" + str(count_memo_maximizer_min_value)
             return memo_maximizer_min_value[state.board]
         elif(player_about_to_move == 'G' and state.board in memo_minimizer_min_value and memorization):
             count_memo_minimizer_min_value = count_memo_minimizer_min_value + 1
+            print("memo used")
             #print "used memorization in memo_minimizer_min_value #=" + str(count_memo_minimizer_min_value)
             return memo_minimizer_min_value[state.board]
 
