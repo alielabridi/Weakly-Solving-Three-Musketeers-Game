@@ -29,7 +29,7 @@ initial_board = (\
     ('G','G','G','G','G'),\
     ('M','G','G','G','G'))
 initial_state_standard_three_musketeers = GameState(to_move = 'M', utility = 0, board = initial_board, moves = {})
-start = time.time()
+startprint = time.time()
 
 
 def reinitiliaze_vars():
@@ -66,7 +66,8 @@ def max(a,b):
     return a if a>b else b
 
 def alphabeta_search(state, game):
-    if(time.time() - start > 3600):
+    if(time.time() - startprint > 3600):
+        startprint = time.time()
         print_info_vars()
     """Search game to determine best action; use alpha-beta pruning.
     As in [Figure 5.7], this version searches all the way to the leaves."""
