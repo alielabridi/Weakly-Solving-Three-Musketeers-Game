@@ -1,0 +1,5030 @@
+Starting the program...
++++++++++++++++++++++
+initial state of the board
+('M', ' ', 'G', ' ', 'M')
+(' ', ' ', 'G', ' ', ' ')
+(' ', ' ', 'G', ' ', 'G')
+(' ', ' ', 'M', ' ', ' ')
+(' ', ' ', ' ', ' ', ' ')
+-----
+to_move M utility = -1
+('M', ' ', 'G', ' ', 'M')
+(' ', ' ', 'G', ' ', ' ')
+(' ', ' ', 'M', ' ', 'G')
+(' ', ' ', ' ', ' ', ' ')
+(' ', ' ', ' ', ' ', ' ')
+-----
+-----
+to_move G utility = 1
+('M', ' ', 'G', ' ', 'M')
+(' ', ' ', 'G', ' ', ' ')
+(' ', ' ', 'M', ' ', ' ')
+(' ', ' ', ' ', ' ', 'G')
+(' ', ' ', ' ', ' ', ' ')
+-----
+-----
+to_move M utility = -1
+('M', ' ', 'G', ' ', 'M')
+(' ', ' ', 'M', ' ', ' ')
+(' ', ' ', ' ', ' ', ' ')
+(' ', ' ', ' ', ' ', 'G')
+(' ', ' ', ' ', ' ', ' ')
+-----
+-----
+to_move G utility = 1
+('M', ' ', 'G', ' ', 'M')
+(' ', ' ', 'M', ' ', ' ')
+(' ', ' ', ' ', ' ', ' ')
+(' ', ' ', ' ', ' ', ' ')
+(' ', ' ', ' ', ' ', 'G')
+-----
+-----
+to_move M utility = -1
+('M', ' ', 'M', ' ', 'M')
+(' ', ' ', ' ', ' ', ' ')
+(' ', ' ', ' ', ' ', ' ')
+(' ', ' ', ' ', ' ', ' ')
+(' ', ' ', ' ', ' ', 'G')
+-----
+end state of the board
+('M', ' ', 'M', ' ', 'M')
+(' ', ' ', ' ', ' ', ' ')
+(' ', ' ', ' ', ' ', ' ')
+(' ', ' ', ' ', ' ', ' ')
+(' ', ' ', ' ', ' ', 'G')
++++++++++++++++++++++
+initial state of the board
+('M', ' ', 'G', ' ', 'M')
+(' ', ' ', 'G', ' ', ' ')
+(' ', ' ', 'G', ' ', 'G')
+(' ', ' ', 'G', ' ', ' ')
+(' ', ' ', 'M', ' ', ' ')
+-----
+to_move M utility = -1
+('M', ' ', 'G', ' ', 'M')
+(' ', ' ', 'G', ' ', ' ')
+(' ', ' ', 'G', ' ', 'G')
+(' ', ' ', 'M', ' ', ' ')
+(' ', ' ', ' ', ' ', ' ')
+-----
+-----
+to_move G utility = 1
+('M', ' ', 'G', ' ', 'M')
+(' ', ' ', 'G', ' ', ' ')
+(' ', ' ', 'G', ' ', ' ')
+(' ', ' ', 'M', ' ', 'G')
+(' ', ' ', ' ', ' ', ' ')
+-----
+-----
+to_move M utility = -1
+('M', ' ', 'G', ' ', 'M')
+(' ', ' ', 'G', ' ', ' ')
+(' ', ' ', 'M', ' ', ' ')
+(' ', ' ', ' ', ' ', 'G')
+(' ', ' ', ' ', ' ', ' ')
+-----
+-----
+to_move G utility = 1
+('M', ' ', 'G', ' ', 'M')
+(' ', ' ', 'G', ' ', ' ')
+(' ', ' ', 'M', ' ', ' ')
+(' ', ' ', ' ', ' ', ' ')
+(' ', ' ', ' ', ' ', 'G')
+-----
+-----
+to_move M utility = -1
+('M', ' ', 'G', ' ', 'M')
+(' ', ' ', 'M', ' ', ' ')
+(' ', ' ', ' ', ' ', ' ')
+(' ', ' ', ' ', ' ', ' ')
+(' ', ' ', ' ', ' ', 'G')
+-----
+-----
+to_move G utility = 1
+('M', ' ', 'G', ' ', 'M')
+(' ', ' ', 'M', ' ', ' ')
+(' ', ' ', ' ', ' ', ' ')
+(' ', ' ', ' ', ' ', 'G')
+(' ', ' ', ' ', ' ', ' ')
+-----
+-----
+to_move M utility = -1
+('M', ' ', 'M', ' ', 'M')
+(' ', ' ', ' ', ' ', ' ')
+(' ', ' ', ' ', ' ', ' ')
+(' ', ' ', ' ', ' ', 'G')
+(' ', ' ', ' ', ' ', ' ')
+-----
+end state of the board
+('M', ' ', 'M', ' ', 'M')
+(' ', ' ', ' ', ' ', ' ')
+(' ', ' ', ' ', ' ', ' ')
+(' ', ' ', ' ', ' ', 'G')
+(' ', ' ', ' ', ' ', ' ')
++++++++++++++++++++++
+initial state of the board
+('M', ' ', ' ', ' ', 'G')
+(' ', ' ', ' ', ' ', ' ')
+('G', 'G', 'G', 'G', 'M')
+(' ', ' ', ' ', ' ', ' ')
+('M', ' ', 'G', ' ', ' ')
+-----
+to_move M utility = -1
+('M', ' ', ' ', ' ', 'G')
+(' ', ' ', ' ', ' ', ' ')
+('G', 'G', 'G', 'M', ' ')
+(' ', ' ', ' ', ' ', ' ')
+('M', ' ', 'G', ' ', ' ')
+-----
+-----
+to_move G utility = 1
+('M', ' ', ' ', ' ', ' ')
+(' ', ' ', ' ', ' ', 'G')
+('G', 'G', 'G', 'M', ' ')
+(' ', ' ', ' ', ' ', ' ')
+('M', ' ', 'G', ' ', ' ')
+-----
+-----
+to_move M utility = -1
+('M', ' ', ' ', ' ', ' ')
+(' ', ' ', ' ', ' ', 'G')
+('G', 'G', 'M', ' ', ' ')
+(' ', ' ', ' ', ' ', ' ')
+('M', ' ', 'G', ' ', ' ')
+-----
+-----
+to_move G utility = 1
+('M', ' ', ' ', ' ', ' ')
+(' ', ' ', ' ', ' ', ' ')
+('G', 'G', 'M', ' ', 'G')
+(' ', ' ', ' ', ' ', ' ')
+('M', ' ', 'G', ' ', ' ')
+-----
+-----
+to_move M utility = -1
+('M', ' ', ' ', ' ', ' ')
+(' ', ' ', ' ', ' ', ' ')
+('G', 'M', ' ', ' ', 'G')
+(' ', ' ', ' ', ' ', ' ')
+('M', ' ', 'G', ' ', ' ')
+-----
+-----
+to_move G utility = 1
+('M', ' ', ' ', ' ', ' ')
+(' ', ' ', ' ', ' ', ' ')
+('G', 'M', ' ', ' ', ' ')
+(' ', ' ', ' ', ' ', 'G')
+('M', ' ', 'G', ' ', ' ')
+-----
+-----
+to_move M utility = -1
+('M', ' ', ' ', ' ', ' ')
+(' ', ' ', ' ', ' ', ' ')
+('M', ' ', ' ', ' ', ' ')
+(' ', ' ', ' ', ' ', 'G')
+('M', ' ', 'G', ' ', ' ')
+-----
+end state of the board
+('M', ' ', ' ', ' ', ' ')
+(' ', ' ', ' ', ' ', ' ')
+('M', ' ', ' ', ' ', ' ')
+(' ', ' ', ' ', ' ', 'G')
+('M', ' ', 'G', ' ', ' ')
++++++++++++++++++++++
+initial state of the board
+(' ', ' ', ' ', ' ', 'M')
+(' ', ' ', 'G', ' ', ' ')
+(' ', ' ', 'M', ' ', ' ')
+(' ', ' ', ' ', ' ', ' ')
+('M', ' ', ' ', ' ', ' ')
+-----
+to_move M utility = 1
+(' ', ' ', ' ', ' ', 'M')
+(' ', ' ', 'M', ' ', ' ')
+(' ', ' ', ' ', ' ', ' ')
+(' ', ' ', ' ', ' ', ' ')
+('M', ' ', ' ', ' ', ' ')
+-----
+end state of the board
+(' ', ' ', ' ', ' ', 'M')
+(' ', ' ', 'M', ' ', ' ')
+(' ', ' ', ' ', ' ', ' ')
+(' ', ' ', ' ', ' ', ' ')
+('M', ' ', ' ', ' ', ' ')
++++++++++++++++++++++
+initial state of the board
+(' ', ' ', ' ', ' ', ' ')
+(' ', 'M', 'G', 'M', ' ')
+(' ', ' ', 'M', ' ', ' ')
+(' ', ' ', ' ', ' ', ' ')
+(' ', ' ', ' ', ' ', ' ')
+-----
+to_move M utility = 1
+(' ', ' ', ' ', ' ', ' ')
+(' ', ' ', 'M', 'M', ' ')
+(' ', ' ', 'M', ' ', ' ')
+(' ', ' ', ' ', ' ', ' ')
+(' ', ' ', ' ', ' ', ' ')
+-----
+end state of the board
+(' ', ' ', ' ', ' ', ' ')
+(' ', ' ', 'M', 'M', ' ')
+(' ', ' ', 'M', ' ', ' ')
+(' ', ' ', ' ', ' ', ' ')
+(' ', ' ', ' ', ' ', ' ')
++++++++++++++++++++++
+initial state of the board
+(' ', ' ', ' ', ' ', ' ')
+(' ', ' ', ' ', ' ', ' ')
+(' ', ' ', ' ', ' ', ' ')
+(' ', ' ', 'M', ' ', ' ')
+('M', ' ', 'G', ' ', 'M')
+-----
+to_move M utility = -1
+(' ', ' ', ' ', ' ', ' ')
+(' ', ' ', ' ', ' ', ' ')
+(' ', ' ', ' ', ' ', ' ')
+(' ', ' ', ' ', ' ', ' ')
+('M', ' ', 'M', ' ', 'M')
+-----
+end state of the board
+(' ', ' ', ' ', ' ', ' ')
+(' ', ' ', ' ', ' ', ' ')
+(' ', ' ', ' ', ' ', ' ')
+(' ', ' ', ' ', ' ', ' ')
+('M', ' ', 'M', ' ', 'M')
++++++++++++++++++++++
+initial state of the board
+(' ', ' ', ' ', ' ', 'G')
+(' ', ' ', 'M', ' ', ' ')
+(' ', ' ', 'M', ' ', ' ')
+('M', 'G', 'G', ' ', ' ')
+(' ', ' ', ' ', ' ', ' ')
+-----
+to_move M utility = 1
+(' ', ' ', ' ', ' ', 'G')
+(' ', ' ', 'M', ' ', ' ')
+(' ', ' ', ' ', ' ', ' ')
+('M', 'G', 'M', ' ', ' ')
+(' ', ' ', ' ', ' ', ' ')
+-----
+-----
+to_move G utility = -1
+(' ', ' ', ' ', ' ', ' ')
+(' ', ' ', 'M', ' ', 'G')
+(' ', ' ', ' ', ' ', ' ')
+('M', 'G', 'M', ' ', ' ')
+(' ', ' ', ' ', ' ', ' ')
+-----
+-----
+to_move M utility = 1
+(' ', ' ', ' ', ' ', ' ')
+(' ', ' ', 'M', ' ', 'G')
+(' ', ' ', ' ', ' ', ' ')
+(' ', 'M', 'M', ' ', ' ')
+(' ', ' ', ' ', ' ', ' ')
+-----
+end state of the board
+(' ', ' ', ' ', ' ', ' ')
+(' ', ' ', 'M', ' ', 'G')
+(' ', ' ', ' ', ' ', ' ')
+(' ', 'M', 'M', ' ', ' ')
+(' ', ' ', ' ', ' ', ' ')
++++++++++++++++++++++
+initial state of the board
+(' ', ' ', 'M', ' ', 'G')
+(' ', 'G', ' ', 'G', ' ')
+('M', ' ', 'G', ' ', ' ')
+('M', 'G', ' ', ' ', ' ')
+(' ', ' ', 'G', ' ', ' ')
+-----
+to_move M utility = 1
+(' ', ' ', 'M', ' ', 'G')
+(' ', 'G', ' ', 'G', ' ')
+('M', ' ', 'G', ' ', ' ')
+(' ', 'M', ' ', ' ', ' ')
+(' ', ' ', 'G', ' ', ' ')
+-----
+end state of the board
+(' ', ' ', 'M', ' ', 'G')
+(' ', 'G', ' ', 'G', ' ')
+('M', ' ', 'G', ' ', ' ')
+(' ', 'M', ' ', ' ', ' ')
+(' ', ' ', 'G', ' ', ' ')
+All unit tests succeeded
+memorization = 1
+count_memo_minimizer_max_value = 120
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 38
+count_alpha_prunning = 366
+count_beta_prunning = 365
+max_depth_maximizer = 9
+max_depth_minimizer = 8
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 121
+memo_minimizer_max_value = 380
+memo_minimizer_min_value = 379
+time spent: 0.21215152740478516
+size taken : 18528
+board size88
+hash size28
+execution time for unit testing: 0.0
+initial state of the board
+('G', 'G', 'G', 'G', 'M')
+('G', 'G', 'G', 'G', 'G')
+('G', 'G', 'M', 'G', 'G')
+('M', 'G', 'G', 'G', 'G')
+('G', ' ', 'G', 'G', 'G')
+memorization = 1
+count_memo_minimizer_max_value = 2327887
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 403511
+count_alpha_prunning = 24086
+count_beta_prunning = 1158674
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 409713
+memo_minimizer_max_value = 1173334
+memo_minimizer_min_value = 379
+time spent: 600.0006384849548
+size taken : 41943144
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 4969879
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 830680
+count_alpha_prunning = 45929
+count_beta_prunning = 2243180
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 801335
+memo_minimizer_max_value = 2270498
+memo_minimizer_min_value = 379
+time spent: 1200.0010657310486
+size taken : 83886176
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 7792622
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 1201978
+count_alpha_prunning = 72026
+count_beta_prunning = 3150016
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 1171277
+memo_minimizer_max_value = 3191102
+memo_minimizer_min_value = 379
+time spent: 1800.0022556781769
+size taken : 167772264
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 10458655
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 1501395
+count_alpha_prunning = 101583
+count_beta_prunning = 3947219
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 1512534
+memo_minimizer_max_value = 4003366
+memo_minimizer_min_value = 379
+time spent: 2400.0026512145996
+size taken : 167772264
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 13488867
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 1942167
+count_alpha_prunning = 145216
+count_beta_prunning = 4940189
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 1904874
+memo_minimizer_max_value = 5017865
+memo_minimizer_min_value = 379
+time spent: 3000.002187013626
+size taken : 167772264
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 16869608
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 2379046
+count_alpha_prunning = 189720
+count_beta_prunning = 5847546
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 2303460
+memo_minimizer_max_value = 5945533
+memo_minimizer_min_value = 379
+time spent: 3600.0028896331787
+size taken : 335544416
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 20018897
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 2751216
+count_alpha_prunning = 224975
+count_beta_prunning = 6688975
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 2666298
+memo_minimizer_max_value = 6803416
+memo_minimizer_min_value = 379
+time spent: 4200.002908945084
+size taken : 335544416
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 23268418
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 3123781
+count_alpha_prunning = 260866
+count_beta_prunning = 7536942
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 3044608
+memo_minimizer_max_value = 7668350
+memo_minimizer_min_value = 379
+time spent: 4800.003682851791
+size taken : 335544416
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 26560708
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 3506201
+count_alpha_prunning = 289425
+count_beta_prunning = 8400375
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 3420746
+memo_minimizer_max_value = 8545881
+memo_minimizer_min_value = 379
+time spent: 5400.003381967545
+size taken : 335544416
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 29960006
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 3868868
+count_alpha_prunning = 323943
+count_beta_prunning = 9252471
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 3794905
+memo_minimizer_max_value = 9415551
+memo_minimizer_min_value = 379
+time spent: 6000.004324674606
+size taken : 335544416
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 33435580
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 4209316
+count_alpha_prunning = 361321
+count_beta_prunning = 10066566
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 4168401
+memo_minimizer_max_value = 10248447
+memo_minimizer_min_value = 379
+time spent: 6600.004156827927
+size taken : 335544416
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 36650800
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 4593386
+count_alpha_prunning = 412924
+count_beta_prunning = 10934933
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 4535026
+memo_minimizer_max_value = 11143488
+memo_minimizer_min_value = 379
+time spent: 7200.004290342331
+size taken : 335544416
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 39968366
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 5001759
+count_alpha_prunning = 460354
+count_beta_prunning = 11749229
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 4900198
+memo_minimizer_max_value = 11980536
+memo_minimizer_min_value = 379
+time spent: 7800.0047924518585
+size taken : 671088744
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 43187715
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 5384587
+count_alpha_prunning = 505552
+count_beta_prunning = 12557106
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 5246563
+memo_minimizer_max_value = 12811548
+memo_minimizer_min_value = 379
+time spent: 8400.004338264465
+size taken : 671088744
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 46634899
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 5767935
+count_alpha_prunning = 557952
+count_beta_prunning = 13331331
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 5600794
+memo_minimizer_max_value = 13611207
+memo_minimizer_min_value = 379
+time spent: 9000.004722118378
+size taken : 671088744
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 50000134
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 6171548
+count_alpha_prunning = 608290
+count_beta_prunning = 14162077
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 5972289
+memo_minimizer_max_value = 14466880
+memo_minimizer_min_value = 379
+time spent: 9600.00517487526
+size taken : 671088744
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 53596900
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 6547071
+count_alpha_prunning = 666806
+count_beta_prunning = 14893016
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 6344463
+memo_minimizer_max_value = 15223663
+memo_minimizer_min_value = 379
+time spent: 10200.00542974472
+size taken : 671088744
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 57096857
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 6925788
+count_alpha_prunning = 724923
+count_beta_prunning = 15666193
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 6716337
+memo_minimizer_max_value = 16023358
+memo_minimizer_min_value = 379
+time spent: 10800.00641489029
+size taken : 671088744
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 60477910
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 7342253
+count_alpha_prunning = 774717
+count_beta_prunning = 16490599
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 7094508
+memo_minimizer_max_value = 16870405
+memo_minimizer_min_value = 379
+time spent: 11400.006367206573
+size taken : 671088744
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 63887906
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 7755567
+count_alpha_prunning = 825753
+count_beta_prunning = 17280395
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 7459815
+memo_minimizer_max_value = 17683737
+memo_minimizer_min_value = 379
+time spent: 12000.007333278656
+size taken : 671088744
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 67399947
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 8101283
+count_alpha_prunning = 884439
+count_beta_prunning = 17969202
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 7816849
+memo_minimizer_max_value = 18398183
+memo_minimizer_min_value = 379
+time spent: 12600.007268428802
+size taken : 671088744
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 71079049
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 8440600
+count_alpha_prunning = 933476
+count_beta_prunning = 18653073
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 8186220
+memo_minimizer_max_value = 19102261
+memo_minimizer_min_value = 379
+time spent: 13200.00811624527
+size taken : 671088744
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 74921387
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 8782783
+count_alpha_prunning = 980479
+count_beta_prunning = 19352173
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 8560815
+memo_minimizer_max_value = 19819713
+memo_minimizer_min_value = 379
+time spent: 13800.008090496063
+size taken : 671088744
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 78725127
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 9129732
+count_alpha_prunning = 1045782
+count_beta_prunning = 20010140
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 8932133
+memo_minimizer_max_value = 20502266
+memo_minimizer_min_value = 379
+time spent: 14400.008525848389
+size taken : 671088744
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 82701895
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 9530503
+count_alpha_prunning = 1122973
+count_beta_prunning = 20782742
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 9347369
+memo_minimizer_max_value = 21307035
+memo_minimizer_min_value = 379
+time spent: 15000.008753299713
+size taken : 671088744
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 86565419
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 9949672
+count_alpha_prunning = 1175632
+count_beta_prunning = 21657753
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 9758083
+memo_minimizer_max_value = 22207710
+memo_minimizer_min_value = 379
+time spent: 15600.0098259449
+size taken : 671088744
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 90458434
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 10359769
+count_alpha_prunning = 1217897
+count_beta_prunning = 22512978
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 10158576
+memo_minimizer_max_value = 23082909
+memo_minimizer_min_value = 379
+time spent: 16200.008872270584
+size taken : 1342177376
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 94500567
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 10740644
+count_alpha_prunning = 1262656
+count_beta_prunning = 23310175
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 10564034
+memo_minimizer_max_value = 23899819
+memo_minimizer_min_value = 379
+time spent: 16800.008918762207
+size taken : 1342177376
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 98390284
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 11164961
+count_alpha_prunning = 1316247
+count_beta_prunning = 24143676
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 10965218
+memo_minimizer_max_value = 24759097
+memo_minimizer_min_value = 379
+time spent: 17400.008991003036
+size taken : 1342177376
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 102556158
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 11519801
+count_alpha_prunning = 1364124
+count_beta_prunning = 24889622
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 11365609
+memo_minimizer_max_value = 25524582
+memo_minimizer_min_value = 379
+time spent: 18000.009300231934
+size taken : 1342177376
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 106629640
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 11892358
+count_alpha_prunning = 1429459
+count_beta_prunning = 25638737
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 11776393
+memo_minimizer_max_value = 26302394
+memo_minimizer_min_value = 379
+time spent: 18600.0093460083
+size taken : 1342177376
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 110780534
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 12240826
+count_alpha_prunning = 1493032
+count_beta_prunning = 26376333
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 12185116
+memo_minimizer_max_value = 27066521
+memo_minimizer_min_value = 379
+time spent: 19200.009390115738
+size taken : 1342177376
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 114902779
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 12619718
+count_alpha_prunning = 1563544
+count_beta_prunning = 27118898
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 12602829
+memo_minimizer_max_value = 27838186
+memo_minimizer_min_value = 379
+time spent: 19800.00943851471
+size taken : 1342177376
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 118916196
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 13018345
+count_alpha_prunning = 1614903
+count_beta_prunning = 27945751
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 13019587
+memo_minimizer_max_value = 28688193
+memo_minimizer_min_value = 379
+time spent: 20400.009484767914
+size taken : 1342177376
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 122780161
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 13459284
+count_alpha_prunning = 1667416
+count_beta_prunning = 28780767
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 13429459
+memo_minimizer_max_value = 29544686
+memo_minimizer_min_value = 379
+time spent: 21000.009530067444
+size taken : 1342177376
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 126679996
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 13892560
+count_alpha_prunning = 1716366
+count_beta_prunning = 29616974
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 13829023
+memo_minimizer_max_value = 30402087
+memo_minimizer_min_value = 379
+time spent: 21600.009789943695
+size taken : 1342177376
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 130687371
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 14307942
+count_alpha_prunning = 1766582
+count_beta_prunning = 30440880
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 14213477
+memo_minimizer_max_value = 31248750
+memo_minimizer_min_value = 379
+time spent: 22200.009833812714
+size taken : 1342177376
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 134729214
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 14703189
+count_alpha_prunning = 1811664
+count_beta_prunning = 31258940
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 14592442
+memo_minimizer_max_value = 32087475
+memo_minimizer_min_value = 379
+time spent: 22800.009882211685
+size taken : 1342177376
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 138763148
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 15097000
+count_alpha_prunning = 1865359
+count_beta_prunning = 32044699
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 14983797
+memo_minimizer_max_value = 32896178
+memo_minimizer_min_value = 379
+time spent: 23400.009925842285
+size taken : 1342177376
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 142857977
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 15487144
+count_alpha_prunning = 1925236
+count_beta_prunning = 32787030
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 15364499
+memo_minimizer_max_value = 33663805
+memo_minimizer_min_value = 379
+time spent: 24000.009974479675
+size taken : 1342177376
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 146924467
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 15862686
+count_alpha_prunning = 1984225
+count_beta_prunning = 33517195
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 15767368
+memo_minimizer_max_value = 34417448
+memo_minimizer_min_value = 379
+time spent: 24600.010021209717
+size taken : 1342177376
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 150909791
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 16263060
+count_alpha_prunning = 2049359
+count_beta_prunning = 34259216
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 16173093
+memo_minimizer_max_value = 35185060
+memo_minimizer_min_value = 379
+time spent: 25200.01072716713
+size taken : 1342177376
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 155100051
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 16614081
+count_alpha_prunning = 2104744
+count_beta_prunning = 34979869
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 16574973
+memo_minimizer_max_value = 35928335
+memo_minimizer_min_value = 379
+time spent: 25800.01077222824
+size taken : 1342177376
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 159387407
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 16964503
+count_alpha_prunning = 2153791
+count_beta_prunning = 35685061
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 16961414
+memo_minimizer_max_value = 36652063
+memo_minimizer_min_value = 379
+time spent: 26400.010818243027
+size taken : 1342177376
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 163524482
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 17335746
+count_alpha_prunning = 2222851
+count_beta_prunning = 36409193
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 17357594
+memo_minimizer_max_value = 37405473
+memo_minimizer_min_value = 379
+time spent: 27000.0118663311
+size taken : 1342177376
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 167410375
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 17777887
+count_alpha_prunning = 2292682
+count_beta_prunning = 37172092
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 17747109
+memo_minimizer_max_value = 38198596
+memo_minimizer_min_value = 379
+time spent: 27600.010908842087
+size taken : 1342177376
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 171444036
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 18161531
+count_alpha_prunning = 2348627
+count_beta_prunning = 37911754
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 18129403
+memo_minimizer_max_value = 38963035
+memo_minimizer_min_value = 379
+time spent: 28200.010956287384
+size taken : 1342177376
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 175499446
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 18548327
+count_alpha_prunning = 2427035
+count_beta_prunning = 38604545
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 18531739
+memo_minimizer_max_value = 39686674
+memo_minimizer_min_value = 379
+time spent: 28800.011833667755
+size taken : 1342177376
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 179425139
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 18966884
+count_alpha_prunning = 2532003
+count_beta_prunning = 39277452
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 18936709
+memo_minimizer_max_value = 40401911
+memo_minimizer_min_value = 379
+time spent: 29400.011879205704
+size taken : 1342177376
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 183480498
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 19347940
+count_alpha_prunning = 2603935
+count_beta_prunning = 39976434
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 19338907
+memo_minimizer_max_value = 41127453
+memo_minimizer_min_value = 379
+time spent: 30000.011925935745
+size taken : 1342177376
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 187587406
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 19728535
+count_alpha_prunning = 2681172
+count_beta_prunning = 40650030
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 19728455
+memo_minimizer_max_value = 41831900
+memo_minimizer_min_value = 379
+time spent: 30600.01197218895
+size taken : 1342177376
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 191786853
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 20087379
+count_alpha_prunning = 2756898
+count_beta_prunning = 41304324
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 20124540
+memo_minimizer_max_value = 42514791
+memo_minimizer_min_value = 379
+time spent: 31200.012018203735
+size taken : 1342177376
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 195824894
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 20486766
+count_alpha_prunning = 2833350
+count_beta_prunning = 42018971
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 20516406
+memo_minimizer_max_value = 43261304
+memo_minimizer_min_value = 379
+time spent: 31800.013063430786
+size taken : 1342177376
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 199910211
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 20861663
+count_alpha_prunning = 2906462
+count_beta_prunning = 42704718
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 20901218
+memo_minimizer_max_value = 43978751
+memo_minimizer_min_value = 379
+time spent: 32400.0148165226
+size taken : 1342177376
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 203950729
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 21250980
+count_alpha_prunning = 2987234
+count_beta_prunning = 43398837
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 21287490
+memo_minimizer_max_value = 44708157
+memo_minimizer_min_value = 379
+time spent: 33000.01386451721
+size taken : 1342177376
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 207988237
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 21628165
+count_alpha_prunning = 3069170
+count_beta_prunning = 44060269
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 21688733
+memo_minimizer_max_value = 45402430
+memo_minimizer_min_value = 379
+time spent: 33600.013910770416
+size taken : 2684354664
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 212234002
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 21969625
+count_alpha_prunning = 3136929
+count_beta_prunning = 44715136
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 22096302
+memo_minimizer_max_value = 46080986
+memo_minimizer_min_value = 379
+time spent: 34200.01395654678
+size taken : 2684354664
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 216323216
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 22374654
+count_alpha_prunning = 3229599
+count_beta_prunning = 45396137
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 22503681
+memo_minimizer_max_value = 46798569
+memo_minimizer_min_value = 379
+time spent: 34800.01400065422
+size taken : 2684354664
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 220416286
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 22784932
+count_alpha_prunning = 3323276
+count_beta_prunning = 46087763
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 22910394
+memo_minimizer_max_value = 47528516
+memo_minimizer_min_value = 379
+time spent: 35400.014046669006
+size taken : 2684354664
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 224560506
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 23205492
+count_alpha_prunning = 3392090
+count_beta_prunning = 46817306
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 23307221
+memo_minimizer_max_value = 48283080
+memo_minimizer_min_value = 379
+time spent: 36000.014734983444
+size taken : 2684354664
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 228737913
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 23618508
+count_alpha_prunning = 3469479
+count_beta_prunning = 47511426
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 23695851
+memo_minimizer_max_value = 49004347
+memo_minimizer_min_value = 379
+time spent: 36600.01478123665
+size taken : 2684354664
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 232695799
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 23982791
+count_alpha_prunning = 3540853
+count_beta_prunning = 48143922
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 24057572
+memo_minimizer_max_value = 49663097
+memo_minimizer_min_value = 379
+time spent: 37200.01520442963
+size taken : 2684354664
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 236571382
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 24373649
+count_alpha_prunning = 3614998
+count_beta_prunning = 48794322
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 24421496
+memo_minimizer_max_value = 50340938
+memo_minimizer_min_value = 379
+time spent: 37800.015503168106
+size taken : 2684354664
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 240628240
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 24768015
+count_alpha_prunning = 3703049
+count_beta_prunning = 49436298
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 24801015
+memo_minimizer_max_value = 51016334
+memo_minimizer_min_value = 379
+time spent: 38400.01611161232
+size taken : 2684354664
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 244574000
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 25182441
+count_alpha_prunning = 3796816
+count_beta_prunning = 50085695
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 25189009
+memo_minimizer_max_value = 51700991
+memo_minimizer_min_value = 379
+time spent: 39000.01697611809
+size taken : 2684354664
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 248401708
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 25593354
+count_alpha_prunning = 3879495
+count_beta_prunning = 50736968
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 25572463
+memo_minimizer_max_value = 52382733
+memo_minimizer_min_value = 379
+time spent: 39600.017364263535
+size taken : 2684354664
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 252289352
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 26007103
+count_alpha_prunning = 3974489
+count_beta_prunning = 51378180
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 25948016
+memo_minimizer_max_value = 53059552
+memo_minimizer_min_value = 379
+time spent: 40200.01802921295
+size taken : 2684354664
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 256173313
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 26419280
+count_alpha_prunning = 4056628
+count_beta_prunning = 52042360
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 26325591
+memo_minimizer_max_value = 53755329
+memo_minimizer_min_value = 379
+time spent: 40800.018450737
+size taken : 2684354664
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 260187412
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 26799461
+count_alpha_prunning = 4126055
+count_beta_prunning = 52681595
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 26696664
+memo_minimizer_max_value = 54419362
+memo_minimizer_min_value = 379
+time spent: 41400.018654346466
+size taken : 2684354664
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 263809635
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 27135631
+count_alpha_prunning = 4193013
+count_beta_prunning = 53258299
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 27032349
+memo_minimizer_max_value = 55020932
+memo_minimizer_min_value = 379
+time spent: 42000.01875424385
+size taken : 2684354664
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 267363397
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 27486750
+count_alpha_prunning = 4266034
+count_beta_prunning = 53845770
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 27377013
+memo_minimizer_max_value = 55637343
+memo_minimizer_min_value = 379
+time spent: 42600.01940059662
+size taken : 2684354664
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 271043144
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 27814540
+count_alpha_prunning = 4330739
+count_beta_prunning = 54428296
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 27716282
+memo_minimizer_max_value = 56244642
+memo_minimizer_min_value = 379
+time spent: 43200.01969766617
+size taken : 2684354664
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 274330847
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 28161658
+count_alpha_prunning = 4401251
+count_beta_prunning = 55003963
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 28043202
+memo_minimizer_max_value = 56848276
+memo_minimizer_min_value = 379
+time spent: 43800.02100253105
+size taken : 2684354664
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 277892960
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 28546798
+count_alpha_prunning = 4481196
+count_beta_prunning = 55635380
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 28393067
+memo_minimizer_max_value = 57512531
+memo_minimizer_min_value = 379
+time spent: 44400.02084541321
+size taken : 2684354664
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 281689464
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 28898653
+count_alpha_prunning = 4550033
+count_beta_prunning = 56252586
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 28752228
+memo_minimizer_max_value = 58154676
+memo_minimizer_min_value = 379
+time spent: 45000.02046775818
+size taken : 2684354664
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 285121380
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 29271569
+count_alpha_prunning = 4637393
+count_beta_prunning = 56838616
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 29093488
+memo_minimizer_max_value = 58776369
+memo_minimizer_min_value = 379
+time spent: 45600.02078747749
+size taken : 2684354664
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 288530422
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 29614361
+count_alpha_prunning = 4715536
+count_beta_prunning = 57414664
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 29425647
+memo_minimizer_max_value = 59383735
+memo_minimizer_min_value = 379
+time spent: 46200.02146148682
+size taken : 2684354664
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 292448981
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 30000028
+count_alpha_prunning = 4810207
+count_beta_prunning = 58054256
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 29813374
+memo_minimizer_max_value = 60059789
+memo_minimizer_min_value = 379
+time spent: 46800.02155375481
+size taken : 2684354664
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 296177036
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 30366685
+count_alpha_prunning = 4907631
+count_beta_prunning = 58649481
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 30190233
+memo_minimizer_max_value = 60691391
+memo_minimizer_min_value = 379
+time spent: 47400.02255034447
+size taken : 2684354664
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 299944516
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 30721158
+count_alpha_prunning = 5003510
+count_beta_prunning = 59221947
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 30550831
+memo_minimizer_max_value = 61299609
+memo_minimizer_min_value = 379
+time spent: 48000.02350568771
+size taken : 2684354664
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 303533269
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 31106596
+count_alpha_prunning = 5102534
+count_beta_prunning = 59813725
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 30912206
+memo_minimizer_max_value = 61929915
+memo_minimizer_min_value = 379
+time spent: 48600.02365922928
+size taken : 2684354664
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 307009098
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 31458538
+count_alpha_prunning = 5181177
+count_beta_prunning = 60410739
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 31251282
+memo_minimizer_max_value = 62559061
+memo_minimizer_min_value = 379
+time spent: 49200.02388238907
+size taken : 2684354664
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 310325326
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 31818513
+count_alpha_prunning = 5270643
+count_beta_prunning = 60985895
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 31586076
+memo_minimizer_max_value = 63171558
+memo_minimizer_min_value = 379
+time spent: 49800.02459478378
+size taken : 2684354664
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 313744653
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 32165282
+count_alpha_prunning = 5355454
+count_beta_prunning = 61574067
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 31919549
+memo_minimizer_max_value = 63797530
+memo_minimizer_min_value = 379
+time spent: 50400.02559399605
+size taken : 2684354664
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 317307666
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 32515932
+count_alpha_prunning = 5440579
+count_beta_prunning = 62138295
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 32263981
+memo_minimizer_max_value = 64395312
+memo_minimizer_min_value = 379
+time spent: 51000.02589774132
+size taken : 2684354664
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 320799802
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 32897729
+count_alpha_prunning = 5537549
+count_beta_prunning = 62694899
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 32609200
+memo_minimizer_max_value = 64989500
+memo_minimizer_min_value = 379
+time spent: 51600.026240587234
+size taken : 2684354664
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 324506785
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 33236140
+count_alpha_prunning = 5619679
+count_beta_prunning = 63242301
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 32950540
+memo_minimizer_max_value = 65565977
+memo_minimizer_min_value = 379
+time spent: 52200.027742147446
+size taken : 2684354664
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 328418766
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 33568065
+count_alpha_prunning = 5697431
+count_beta_prunning = 63812676
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 33311866
+memo_minimizer_max_value = 66162787
+memo_minimizer_min_value = 379
+time spent: 52800.02837610245
+size taken : 2684354664
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 331726103
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 33908171
+count_alpha_prunning = 5780620
+count_beta_prunning = 64349354
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 33638435
+memo_minimizer_max_value = 66732911
+memo_minimizer_min_value = 379
+time spent: 53400.02817821503
+size taken : 2684354664
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 335007720
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 34226836
+count_alpha_prunning = 5854421
+count_beta_prunning = 64864216
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 33952614
+memo_minimizer_max_value = 67275089
+memo_minimizer_min_value = 379
+time spent: 54000.036390304565
+size taken : 2684354664
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 338405667
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 34549181
+count_alpha_prunning = 5938593
+count_beta_prunning = 65391423
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 34284170
+memo_minimizer_max_value = 67833891
+memo_minimizer_min_value = 379
+time spent: 54600.03613448143
+size taken : 2684354664
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 341907474
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 34855725
+count_alpha_prunning = 6014352
+count_beta_prunning = 65907442
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 34611870
+memo_minimizer_max_value = 68375560
+memo_minimizer_min_value = 379
+time spent: 55200.03662824631
+size taken : 2684354664
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 342898177
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 34960278
+count_alpha_prunning = 6038805
+count_beta_prunning = 66076912
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 34707536
+memo_minimizer_max_value = 68555313
+memo_minimizer_min_value = 379
+time spent: 60176.0455429554
+size taken : 2684354664
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 346148894
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 35273777
+count_alpha_prunning = 6123982
+count_beta_prunning = 66599474
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 35022809
+memo_minimizer_max_value = 69113675
+memo_minimizer_min_value = 379
+time spent: 60776.04506158829
+size taken : 2684354664
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 349508386
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 35683164
+count_alpha_prunning = 6238360
+count_beta_prunning = 67219907
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 35395499
+memo_minimizer_max_value = 69782573
+memo_minimizer_min_value = 379
+time spent: 61376.04496765137
+size taken : 2684354664
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 352725786
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 36023267
+count_alpha_prunning = 6327363
+count_beta_prunning = 67743209
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 35719062
+memo_minimizer_max_value = 70342685
+memo_minimizer_min_value = 379
+time spent: 61976.0459022522
+size taken : 2684354664
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 356043365
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 36404221
+count_alpha_prunning = 6432605
+count_beta_prunning = 68288690
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 36067043
+memo_minimizer_max_value = 70929844
+memo_minimizer_min_value = 379
+time spent: 62576.04679584503
+size taken : 2684354664
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 359473932
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 36795739
+count_alpha_prunning = 6543200
+count_beta_prunning = 68857869
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 36424081
+memo_minimizer_max_value = 71543143
+memo_minimizer_min_value = 379
+time spent: 63176.04695558548
+size taken : 2684354664
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 362542945
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 37111234
+count_alpha_prunning = 6628256
+count_beta_prunning = 69316396
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 36712371
+memo_minimizer_max_value = 72033612
+memo_minimizer_min_value = 379
+time spent: 63776.04707121849
+size taken : 2684354664
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 365246289
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 37411677
+count_alpha_prunning = 6710384
+count_beta_prunning = 69751392
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 36979266
+memo_minimizer_max_value = 72503028
+memo_minimizer_min_value = 379
+time spent: 64376.04709124565
+size taken : 2684354664
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 367936138
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 37719747
+count_alpha_prunning = 6805382
+count_beta_prunning = 70173372
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 37256741
+memo_minimizer_max_value = 72962959
+memo_minimizer_min_value = 379
+time spent: 64976.04748415947
+size taken : 2684354664
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 371474132
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 38095523
+count_alpha_prunning = 6908580
+count_beta_prunning = 70729516
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 37613726
+memo_minimizer_max_value = 73558688
+memo_minimizer_min_value = 379
+time spent: 65576.04752492905
+size taken : 2684354664
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 374963989
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 38414436
+count_alpha_prunning = 6988512
+count_beta_prunning = 71269153
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 37949433
+memo_minimizer_max_value = 74130479
+memo_minimizer_min_value = 379
+time spent: 66176.04842066765
+size taken : 2684354664
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 378707260
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 38792272
+count_alpha_prunning = 7102450
+count_beta_prunning = 71827607
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 38329256
+memo_minimizer_max_value = 74732799
+memo_minimizer_min_value = 379
+time spent: 66776.04867959023
+size taken : 2684354664
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 382614363
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 39162758
+count_alpha_prunning = 7207546
+count_beta_prunning = 72380984
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 38709692
+memo_minimizer_max_value = 75324590
+memo_minimizer_min_value = 379
+time spent: 67376.04980039597
+size taken : 2684354664
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 386588748
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 39545306
+count_alpha_prunning = 7317312
+count_beta_prunning = 72930319
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 39077695
+memo_minimizer_max_value = 75915698
+memo_minimizer_min_value = 379
+time spent: 67976.04901075363
+size taken : 2684354664
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 389894036
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 39880816
+count_alpha_prunning = 7420048
+count_beta_prunning = 73389025
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 39403650
+memo_minimizer_max_value = 76410442
+memo_minimizer_min_value = 379
+time spent: 68576.04969358444
+size taken : 2684354664
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 393621101
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 40225164
+count_alpha_prunning = 7510397
+count_beta_prunning = 73928253
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 39758932
+memo_minimizer_max_value = 76983092
+memo_minimizer_min_value = 379
+time spent: 69176.04943585396
+size taken : 2684354664
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 397447261
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 40584949
+count_alpha_prunning = 7611003
+count_beta_prunning = 74478776
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 40130854
+memo_minimizer_max_value = 77569782
+memo_minimizer_min_value = 379
+time spent: 69776.05038619041
+size taken : 2684354664
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 401342530
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 40932815
+count_alpha_prunning = 7692159
+count_beta_prunning = 75061434
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 40499728
+memo_minimizer_max_value = 78182084
+memo_minimizer_min_value = 379
+time spent: 70376.05107140541
+size taken : 2684354664
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 405107824
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 41303716
+count_alpha_prunning = 7780557
+count_beta_prunning = 75636906
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 40855959
+memo_minimizer_max_value = 78788115
+memo_minimizer_min_value = 379
+time spent: 70976.0510878563
+size taken : 2684354664
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 408291561
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 41630320
+count_alpha_prunning = 7864708
+count_beta_prunning = 76127554
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 41163576
+memo_minimizer_max_value = 79309462
+memo_minimizer_min_value = 379
+time spent: 71576.0514190197
+size taken : 2684354664
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 411590526
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 41965409
+count_alpha_prunning = 7960591
+count_beta_prunning = 76600836
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 41482470
+memo_minimizer_max_value = 79816558
+memo_minimizer_min_value = 379
+time spent: 72176.05154705048
+size taken : 2684354664
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 414926440
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 42268274
+count_alpha_prunning = 8055628
+count_beta_prunning = 77048412
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 41799465
+memo_minimizer_max_value = 80295602
+memo_minimizer_min_value = 379
+time spent: 72776.05156755447
+size taken : 2684354664
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 418127892
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 42601399
+count_alpha_prunning = 8147232
+count_beta_prunning = 77529978
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 42104017
+memo_minimizer_max_value = 80812151
+memo_minimizer_min_value = 379
+time spent: 73376.05268025398
+size taken : 2684354664
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 421208303
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 42926722
+count_alpha_prunning = 8230464
+count_beta_prunning = 78011236
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 42406004
+memo_minimizer_max_value = 81324087
+memo_minimizer_min_value = 379
+time spent: 73976.05182266235
+size taken : 2684354664
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 424203250
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 43197502
+count_alpha_prunning = 8301060
+count_beta_prunning = 78432217
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 42682733
+memo_minimizer_max_value = 81769652
+memo_minimizer_min_value = 379
+time spent: 74576.05233192444
+size taken : 2684354664
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 427523262
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 43495756
+count_alpha_prunning = 8386185
+count_beta_prunning = 78902683
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 43006209
+memo_minimizer_max_value = 82270275
+memo_minimizer_min_value = 379
+time spent: 75176.0519824028
+size taken : 2684354664
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 431155629
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 43816155
+count_alpha_prunning = 8501473
+count_beta_prunning = 79366252
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 43363374
+memo_minimizer_max_value = 82773025
+memo_minimizer_min_value = 379
+time spent: 75776.05209112167
+size taken : 2684354664
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 435123696
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 44120179
+count_alpha_prunning = 8608588
+count_beta_prunning = 79871468
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 43747380
+memo_minimizer_max_value = 83314431
+memo_minimizer_min_value = 379
+time spent: 76376.05305337906
+size taken : 2684354664
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 439009241
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 44417882
+count_alpha_prunning = 8712819
+count_beta_prunning = 80363321
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 44117925
+memo_minimizer_max_value = 83842914
+memo_minimizer_min_value = 379
+time spent: 76976.05296635628
+size taken : 2684354664
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 442276508
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 44781752
+count_alpha_prunning = 8809460
+count_beta_prunning = 80877247
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 44441544
+memo_minimizer_max_value = 84392427
+memo_minimizer_min_value = 379
+time spent: 77576.05383372307
+size taken : 2684354664
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 445572857
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 45149015
+count_alpha_prunning = 8917287
+count_beta_prunning = 81394325
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 44778749
+memo_minimizer_max_value = 84949829
+memo_minimizer_min_value = 379
+time spent: 78176.0537648201
+size taken : 2684354664
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 449232710
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 45469203
+count_alpha_prunning = 9008149
+count_beta_prunning = 81914033
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 45120448
+memo_minimizer_max_value = 85504167
+memo_minimizer_min_value = 379
+time spent: 78776.0549697876
+size taken : 2684354664
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 452157732
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 45834594
+count_alpha_prunning = 9111191
+count_beta_prunning = 82409307
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 45437654
+memo_minimizer_max_value = 86039890
+memo_minimizer_min_value = 379
+time spent: 79376.05520129204
+size taken : 2684354664
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 455557234
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 46133439
+count_alpha_prunning = 9185304
+count_beta_prunning = 82922191
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 45765144
+memo_minimizer_max_value = 86582705
+memo_minimizer_min_value = 379
+time spent: 79976.05521416664
+size taken : 2684354664
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 458869413
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 46462411
+count_alpha_prunning = 9284836
+count_beta_prunning = 83407413
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 46099808
+memo_minimizer_max_value = 87105072
+memo_minimizer_min_value = 379
+time spent: 80576.05605959892
+size taken : 2684354664
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 462354819
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 46805442
+count_alpha_prunning = 9401153
+count_beta_prunning = 83890048
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 46452906
+memo_minimizer_max_value = 87630333
+memo_minimizer_min_value = 379
+time spent: 81176.05664134026
+size taken : 2684354664
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 466303771
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 47160792
+count_alpha_prunning = 9518158
+count_beta_prunning = 84408300
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 46833584
+memo_minimizer_max_value = 88187556
+memo_minimizer_min_value = 379
+time spent: 81776.05696821213
+size taken : 2684354664
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 469651509
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 47519462
+count_alpha_prunning = 9637138
+count_beta_prunning = 84907612
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 47189095
+memo_minimizer_max_value = 88730008
+memo_minimizer_min_value = 379
+time spent: 82376.05759048462
+size taken : 2684354664
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 473067054
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 47889192
+count_alpha_prunning = 9746744
+count_beta_prunning = 85414542
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 47539977
+memo_minimizer_max_value = 89277003
+memo_minimizer_min_value = 379
+time spent: 82976.05769658089
+size taken : 2684354664
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 475956065
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 48176581
+count_alpha_prunning = 9835266
+count_beta_prunning = 85810499
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 47818659
+memo_minimizer_max_value = 89703372
+memo_minimizer_min_value = 379
+time spent: 83576.06127262115
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 478942897
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 48538148
+count_alpha_prunning = 9948863
+count_beta_prunning = 86280207
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 48142101
+memo_minimizer_max_value = 90215461
+memo_minimizer_min_value = 379
+time spent: 84176.05907011032
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 482027870
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 48883164
+count_alpha_prunning = 10055413
+count_beta_prunning = 86734673
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 48460671
+memo_minimizer_max_value = 90706636
+memo_minimizer_min_value = 379
+time spent: 84776.05953884125
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 485121032
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 49234283
+count_alpha_prunning = 10169505
+count_beta_prunning = 87209294
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 48789428
+memo_minimizer_max_value = 91225134
+memo_minimizer_min_value = 379
+time spent: 85376.06037187576
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 488533095
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 49572195
+count_alpha_prunning = 10298071
+count_beta_prunning = 87655811
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 49149721
+memo_minimizer_max_value = 91720041
+memo_minimizer_min_value = 379
+time spent: 85976.06140589714
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 491930767
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 49930090
+count_alpha_prunning = 10428086
+count_beta_prunning = 88119363
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 49506384
+memo_minimizer_max_value = 92232623
+memo_minimizer_min_value = 379
+time spent: 86576.06046032906
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 495318595
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 50287321
+count_alpha_prunning = 10534379
+count_beta_prunning = 88624901
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 49856699
+memo_minimizer_max_value = 92776391
+memo_minimizer_min_value = 379
+time spent: 87176.06099700928
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 498518891
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 50635152
+count_alpha_prunning = 10647415
+count_beta_prunning = 89114934
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 50204033
+memo_minimizer_max_value = 93310118
+memo_minimizer_min_value = 379
+time spent: 87776.0618300438
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 501445313
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 50949526
+count_alpha_prunning = 10728800
+count_beta_prunning = 89584255
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 50496909
+memo_minimizer_max_value = 93812201
+memo_minimizer_min_value = 379
+time spent: 88376.06366300583
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 505205440
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 51346338
+count_alpha_prunning = 10845314
+count_beta_prunning = 90170919
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 50884899
+memo_minimizer_max_value = 94446384
+memo_minimizer_min_value = 379
+time spent: 88976.06428527832
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 508949267
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 51779123
+count_alpha_prunning = 10985808
+count_beta_prunning = 90763855
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 51287766
+memo_minimizer_max_value = 95100670
+memo_minimizer_min_value = 379
+time spent: 89576.06494307518
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 512742490
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 52206804
+count_alpha_prunning = 11140183
+count_beta_prunning = 91332892
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 51688852
+memo_minimizer_max_value = 95737811
+memo_minimizer_min_value = 379
+time spent: 90176.06501865387
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 516805084
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 52586632
+count_alpha_prunning = 11272711
+count_beta_prunning = 91869739
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 52081250
+memo_minimizer_max_value = 96323942
+memo_minimizer_min_value = 379
+time spent: 90776.06506299973
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 520629364
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 53013899
+count_alpha_prunning = 11422056
+count_beta_prunning = 92424992
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 52484512
+memo_minimizer_max_value = 96938876
+memo_minimizer_min_value = 379
+time spent: 91376.06567263603
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 524391386
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 53481626
+count_alpha_prunning = 11588035
+count_beta_prunning = 92987368
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 52892872
+memo_minimizer_max_value = 97567852
+memo_minimizer_min_value = 379
+time spent: 91976.06571769714
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 528264675
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 53915068
+count_alpha_prunning = 11722921
+count_beta_prunning = 93538918
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 53276778
+memo_minimizer_max_value = 98170342
+memo_minimizer_min_value = 379
+time spent: 92576.0658211708
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 532191296
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 54329732
+count_alpha_prunning = 11852791
+count_beta_prunning = 94082236
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 53667108
+memo_minimizer_max_value = 98759420
+memo_minimizer_min_value = 379
+time spent: 93176.06587004662
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 535972365
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 54770058
+count_alpha_prunning = 12005132
+count_beta_prunning = 94645958
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 54072797
+memo_minimizer_max_value = 99384431
+memo_minimizer_min_value = 379
+time spent: 93776.06600856781
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 539864004
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 55189530
+count_alpha_prunning = 12144021
+count_beta_prunning = 95207928
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 54473015
+memo_minimizer_max_value = 99997600
+memo_minimizer_min_value = 379
+time spent: 94376.06605482101
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 543883088
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 55579419
+count_alpha_prunning = 12258937
+count_beta_prunning = 95783061
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 54856664
+memo_minimizer_max_value = 100615174
+memo_minimizer_min_value = 379
+time spent: 94976.06610131264
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 547871663
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 55971607
+count_alpha_prunning = 12374612
+count_beta_prunning = 96352870
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 55239765
+memo_minimizer_max_value = 101229671
+memo_minimizer_min_value = 379
+time spent: 95576.06620621681
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 551989636
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 56336412
+count_alpha_prunning = 12491099
+count_beta_prunning = 96884221
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 55632180
+memo_minimizer_max_value = 101799877
+memo_minimizer_min_value = 379
+time spent: 96176.06625437737
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 555994649
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 56720848
+count_alpha_prunning = 12632341
+count_beta_prunning = 97405626
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 56036651
+memo_minimizer_max_value = 102369837
+memo_minimizer_min_value = 379
+time spent: 96776.06632733345
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 559904603
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 57127493
+count_alpha_prunning = 12766750
+count_beta_prunning = 97957911
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 56429704
+memo_minimizer_max_value = 102974249
+memo_minimizer_min_value = 379
+time spent: 97376.06637620926
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 563680195
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 57565643
+count_alpha_prunning = 12928463
+count_beta_prunning = 98504943
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 56847203
+memo_minimizer_max_value = 103586223
+memo_minimizer_min_value = 379
+time spent: 97976.0664203167
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 567843653
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 57974880
+count_alpha_prunning = 12998062
+count_beta_prunning = 99178857
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 57221770
+memo_minimizer_max_value = 104287838
+memo_minimizer_min_value = 379
+time spent: 98576.06746697426
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 572390727
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 58310562
+count_alpha_prunning = 12998062
+count_beta_prunning = 99909298
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 57576755
+memo_minimizer_max_value = 105018279
+memo_minimizer_min_value = 379
+time spent: 99176.0675137043
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 576888503
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 58633150
+count_alpha_prunning = 12998062
+count_beta_prunning = 100650912
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 57932516
+memo_minimizer_max_value = 105759893
+memo_minimizer_min_value = 379
+time spent: 99776.0675611496
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 581435734
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 58962022
+count_alpha_prunning = 12998062
+count_beta_prunning = 101382806
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 58286713
+memo_minimizer_max_value = 106491787
+memo_minimizer_min_value = 379
+time spent: 100376.06763458252
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 586002719
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 59270504
+count_alpha_prunning = 12998062
+count_beta_prunning = 102106350
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 58640750
+memo_minimizer_max_value = 107215331
+memo_minimizer_min_value = 379
+time spent: 100976.06833148003
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 590598340
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 59586974
+count_alpha_prunning = 12998062
+count_beta_prunning = 102822039
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 59003555
+memo_minimizer_max_value = 107931020
+memo_minimizer_min_value = 379
+time spent: 101576.06837964058
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 595112546
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 59912065
+count_alpha_prunning = 12998062
+count_beta_prunning = 103568118
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 59369873
+memo_minimizer_max_value = 108677099
+memo_minimizer_min_value = 379
+time spent: 102176.06842470169
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 599667282
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 60196906
+count_alpha_prunning = 12998062
+count_beta_prunning = 104280418
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 59745962
+memo_minimizer_max_value = 109389399
+memo_minimizer_min_value = 379
+time spent: 102776.06847214699
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 603975892
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 60538923
+count_alpha_prunning = 13064178
+count_beta_prunning = 104909029
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 60123057
+memo_minimizer_max_value = 110039074
+memo_minimizer_min_value = 379
+time spent: 103376.0687353611
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 608007432
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 60933418
+count_alpha_prunning = 13203528
+count_beta_prunning = 105446748
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 60513484
+memo_minimizer_max_value = 110624198
+memo_minimizer_min_value = 379
+time spent: 103976.06878447533
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 612213500
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 61296729
+count_alpha_prunning = 13335618
+count_beta_prunning = 105960411
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 60899699
+memo_minimizer_max_value = 111174451
+memo_minimizer_min_value = 379
+time spent: 104576.06882786751
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 616372928
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 61651276
+count_alpha_prunning = 13466782
+count_beta_prunning = 106481994
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 61301517
+memo_minimizer_max_value = 111728136
+memo_minimizer_min_value = 379
+time spent: 105176.0688738823
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 620359828
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 62047139
+count_alpha_prunning = 13599385
+count_beta_prunning = 107031675
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 61703758
+memo_minimizer_max_value = 112320536
+memo_minimizer_min_value = 379
+time spent: 105776.06892085075
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 624250645
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 62464999
+count_alpha_prunning = 13745827
+count_beta_prunning = 107566804
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 62101958
+memo_minimizer_max_value = 112902570
+memo_minimizer_min_value = 379
+time spent: 106376.06896924973
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 628102889
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 62897510
+count_alpha_prunning = 13898522
+count_beta_prunning = 108112983
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 62503282
+memo_minimizer_max_value = 113501266
+memo_minimizer_min_value = 379
+time spent: 106976.06901526451
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 631894714
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 63339306
+count_alpha_prunning = 14050601
+count_beta_prunning = 108663114
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 62901872
+memo_minimizer_max_value = 114103593
+memo_minimizer_min_value = 379
+time spent: 107576.06905889511
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 635718376
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 63774021
+count_alpha_prunning = 14200475
+count_beta_prunning = 109215989
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 63290184
+memo_minimizer_max_value = 114709343
+memo_minimizer_min_value = 379
+time spent: 108176.06910657883
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 639684272
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 64138479
+count_alpha_prunning = 14330559
+count_beta_prunning = 109705233
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 63654441
+memo_minimizer_max_value = 115233466
+memo_minimizer_min_value = 379
+time spent: 108776.06915187836
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 643386492
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 64605026
+count_alpha_prunning = 14495262
+count_beta_prunning = 110247843
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 64059874
+memo_minimizer_max_value = 115835010
+memo_minimizer_min_value = 379
+time spent: 109376.0691974163
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 647097431
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 65024059
+count_alpha_prunning = 14636659
+count_beta_prunning = 110767244
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 64443353
+memo_minimizer_max_value = 116403796
+memo_minimizer_min_value = 379
+time spent: 109976.06924390793
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 650624143
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 65440590
+count_alpha_prunning = 14771375
+count_beta_prunning = 111269856
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 64806641
+memo_minimizer_max_value = 116950643
+memo_minimizer_min_value = 379
+time spent: 110576.0692923069
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 654173598
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 65846423
+count_alpha_prunning = 14913397
+count_beta_prunning = 111758978
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 65175479
+memo_minimizer_max_value = 117488252
+memo_minimizer_min_value = 379
+time spent: 111176.06933569908
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 658068404
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 66183239
+count_alpha_prunning = 15029440
+count_beta_prunning = 112235882
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 65535147
+memo_minimizer_max_value = 118001157
+memo_minimizer_min_value = 379
+time spent: 111776.06938290596
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 661671010
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 66556483
+count_alpha_prunning = 15171987
+count_beta_prunning = 112699569
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 65905057
+memo_minimizer_max_value = 118510162
+memo_minimizer_min_value = 379
+time spent: 112376.06942844391
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 665204499
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 66962668
+count_alpha_prunning = 15326512
+count_beta_prunning = 113184006
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 66285296
+memo_minimizer_max_value = 119045765
+memo_minimizer_min_value = 379
+time spent: 112976.06950306892
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 668857003
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 67325289
+count_alpha_prunning = 15453675
+count_beta_prunning = 113669322
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 66640244
+memo_minimizer_max_value = 119572250
+memo_minimizer_min_value = 379
+time spent: 113576.06954884529
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 672629100
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 67678702
+count_alpha_prunning = 15584062
+count_beta_prunning = 114133166
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 66998814
+memo_minimizer_max_value = 120074277
+memo_minimizer_min_value = 379
+time spent: 114176.06975126266
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 676379083
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 68038864
+count_alpha_prunning = 15697209
+count_beta_prunning = 114631084
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 67353157
+memo_minimizer_max_value = 120609048
+memo_minimizer_min_value = 379
+time spent: 114776.07124137878
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 679602894
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 68473482
+count_alpha_prunning = 15876076
+count_beta_prunning = 115139390
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 67743740
+memo_minimizer_max_value = 121190641
+memo_minimizer_min_value = 379
+time spent: 115376.07042598724
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 683238161
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 68834585
+count_alpha_prunning = 16014420
+count_beta_prunning = 115603530
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 68113748
+memo_minimizer_max_value = 121701816
+memo_minimizer_min_value = 379
+time spent: 115976.07047867775
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 686893561
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 69207459
+count_alpha_prunning = 16135443
+count_beta_prunning = 116099168
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 68470755
+memo_minimizer_max_value = 122240463
+memo_minimizer_min_value = 379
+time spent: 116576.07072877884
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 690503458
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 69584309
+count_alpha_prunning = 16263558
+count_beta_prunning = 116580408
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 68828511
+memo_minimizer_max_value = 122764955
+memo_minimizer_min_value = 379
+time spent: 117176.07177472115
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 694192935
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 69944990
+count_alpha_prunning = 16385713
+count_beta_prunning = 117063492
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 69186090
+memo_minimizer_max_value = 123288101
+memo_minimizer_min_value = 379
+time spent: 117776.07103824615
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 697873013
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 70310719
+count_alpha_prunning = 16507680
+count_beta_prunning = 117545251
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 69540937
+memo_minimizer_max_value = 123807044
+memo_minimizer_min_value = 379
+time spent: 118376.07197189331
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 701429531
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 70696699
+count_alpha_prunning = 16637997
+count_beta_prunning = 118036503
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 69901943
+memo_minimizer_max_value = 124342072
+memo_minimizer_min_value = 379
+time spent: 118976.07262182236
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 704445083
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 71032411
+count_alpha_prunning = 16768070
+count_beta_prunning = 118428340
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 70219814
+memo_minimizer_max_value = 124776734
+memo_minimizer_min_value = 379
+time spent: 119576.07331466675
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 707451507
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 71379834
+count_alpha_prunning = 16904743
+count_beta_prunning = 118829278
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 70548107
+memo_minimizer_max_value = 125225830
+memo_minimizer_min_value = 379
+time spent: 120176.07353210449
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 710529786
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 71741512
+count_alpha_prunning = 17047029
+count_beta_prunning = 119237917
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 70886335
+memo_minimizer_max_value = 125683554
+memo_minimizer_min_value = 379
+time spent: 120776.07367873192
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 714084373
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 72119681
+count_alpha_prunning = 17204724
+count_beta_prunning = 119671315
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 71264192
+memo_minimizer_max_value = 126165894
+memo_minimizer_min_value = 379
+time spent: 121376.07427597046
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 717761992
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 72510720
+count_alpha_prunning = 17354237
+count_beta_prunning = 120134632
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 71643862
+memo_minimizer_max_value = 126676216
+memo_minimizer_min_value = 379
+time spent: 121976.07431960106
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 720996086
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 72839180
+count_alpha_prunning = 17489160
+count_beta_prunning = 120517410
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 71975904
+memo_minimizer_max_value = 127098169
+memo_minimizer_min_value = 379
+time spent: 122576.07542967796
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 724313228
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 73169906
+count_alpha_prunning = 17627710
+count_beta_prunning = 120910968
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 72315863
+memo_minimizer_max_value = 127531207
+memo_minimizer_min_value = 379
+time spent: 123176.07552552223
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 727300086
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 73506734
+count_alpha_prunning = 17768502
+count_beta_prunning = 121313579
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 72646744
+memo_minimizer_max_value = 127982093
+memo_minimizer_min_value = 379
+time spent: 123776.07683610916
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 729597921
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 73796397
+count_alpha_prunning = 17890081
+count_beta_prunning = 121621415
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 72913284
+memo_minimizer_max_value = 128332453
+memo_minimizer_min_value = 379
+time spent: 124376.0772550106
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 730730346
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 73942073
+count_alpha_prunning = 17950527
+count_beta_prunning = 121786552
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 73045784
+memo_minimizer_max_value = 128521298
+memo_minimizer_min_value = 379
+time spent: 125103.77685308456
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 732749217
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 74172976
+count_alpha_prunning = 18055071
+count_beta_prunning = 122040411
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 73274070
+memo_minimizer_max_value = 128811861
+memo_minimizer_min_value = 379
+time spent: 125703.78541398048
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 734622879
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 74407623
+count_alpha_prunning = 18152598
+count_beta_prunning = 122298927
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 73486485
+memo_minimizer_max_value = 129102945
+memo_minimizer_min_value = 379
+time spent: 126303.84132218361
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 736690703
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 74653975
+count_alpha_prunning = 18249162
+count_beta_prunning = 122600084
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 73715629
+memo_minimizer_max_value = 129441986
+memo_minimizer_min_value = 379
+time spent: 126903.84098339081
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 738859122
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 74907870
+count_alpha_prunning = 18342709
+count_beta_prunning = 122902919
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 73947416
+memo_minimizer_max_value = 129778911
+memo_minimizer_min_value = 379
+time spent: 127503.84218239784
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 741103871
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 75170338
+count_alpha_prunning = 18448811
+count_beta_prunning = 123207288
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 74196905
+memo_minimizer_max_value = 130119927
+memo_minimizer_min_value = 379
+time spent: 128103.8426835537
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 742829858
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 75338562
+count_alpha_prunning = 18513965
+count_beta_prunning = 123416241
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 74367736
+memo_minimizer_max_value = 130348170
+memo_minimizer_min_value = 379
+time spent: 128703.84327816963
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 744826505
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 75537595
+count_alpha_prunning = 18585831
+count_beta_prunning = 123666895
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 74564511
+memo_minimizer_max_value = 130621329
+memo_minimizer_min_value = 379
+time spent: 129303.84354877472
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 747026430
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 75743764
+count_alpha_prunning = 18662064
+count_beta_prunning = 123935420
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 74781591
+memo_minimizer_max_value = 130911874
+memo_minimizer_min_value = 379
+time spent: 129903.84385085106
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 749876506
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 75995796
+count_alpha_prunning = 18752600
+count_beta_prunning = 124291718
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 75057797
+memo_minimizer_max_value = 131297175
+memo_minimizer_min_value = 379
+time spent: 130503.84406995773
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 752090635
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 76256060
+count_alpha_prunning = 18846795
+count_beta_prunning = 124610231
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 75299173
+memo_minimizer_max_value = 131651700
+memo_minimizer_min_value = 379
+time spent: 131103.84462714195
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 753722655
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 76438181
+count_alpha_prunning = 18912651
+count_beta_prunning = 124835187
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 75470872
+memo_minimizer_max_value = 131900002
+memo_minimizer_min_value = 379
+time spent: 134597.88894557953
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 755380373
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 76651748
+count_alpha_prunning = 18996179
+count_beta_prunning = 125068296
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 75656193
+memo_minimizer_max_value = 132164161
+memo_minimizer_min_value = 379
+time spent: 135197.8889579773
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 757449471
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 76906078
+count_alpha_prunning = 19103865
+count_beta_prunning = 125341375
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 75890691
+memo_minimizer_max_value = 132476631
+memo_minimizer_min_value = 379
+time spent: 135797.9130525589
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 759989239
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 77158359
+count_alpha_prunning = 19208588
+count_beta_prunning = 125663427
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 76152747
+memo_minimizer_max_value = 132834789
+memo_minimizer_min_value = 379
+time spent: 136397.91423988342
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 762468588
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 77462565
+count_alpha_prunning = 19345447
+count_beta_prunning = 125988149
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 76442262
+memo_minimizer_max_value = 133209523
+memo_minimizer_min_value = 379
+time spent: 136997.91477417946
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 765072576
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 77801168
+count_alpha_prunning = 19489230
+count_beta_prunning = 126329350
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 76747146
+memo_minimizer_max_value = 133600004
+memo_minimizer_min_value = 379
+time spent: 137597.91503882408
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 767641459
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 78155049
+count_alpha_prunning = 19646160
+count_beta_prunning = 126686770
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 77062385
+memo_minimizer_max_value = 134014252
+memo_minimizer_min_value = 379
+time spent: 138197.9160246849
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 770235145
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 78495975
+count_alpha_prunning = 19779448
+count_beta_prunning = 127053929
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 77358542
+memo_minimizer_max_value = 134429567
+memo_minimizer_min_value = 379
+time spent: 138797.91566944122
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 772749751
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 78776858
+count_alpha_prunning = 19889337
+count_beta_prunning = 127383928
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 77623669
+memo_minimizer_max_value = 134798710
+memo_minimizer_min_value = 379
+time spent: 139397.91610336304
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 775574989
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 79047116
+count_alpha_prunning = 19973063
+count_beta_prunning = 127756630
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 77883671
+memo_minimizer_max_value = 135200094
+memo_minimizer_min_value = 379
+time spent: 139997.9197833538
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 778067228
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 79283444
+count_alpha_prunning = 20062287
+count_beta_prunning = 128063680
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 78124517
+memo_minimizer_max_value = 135538236
+memo_minimizer_min_value = 379
+time spent: 140597.91805028915
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 780235350
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 79509962
+count_alpha_prunning = 20163442
+count_beta_prunning = 128322115
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 78355640
+memo_minimizer_max_value = 135830704
+memo_minimizer_min_value = 379
+time spent: 141197.91831111908
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 780288368
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 79517136
+count_alpha_prunning = 20166920
+count_beta_prunning = 128329085
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 78362335
+memo_minimizer_max_value = 135839145
+memo_minimizer_min_value = 379
+time spent: 142781.81802511215
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 782245148
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 79761873
+count_alpha_prunning = 20273111
+count_beta_prunning = 128578331
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 78587328
+memo_minimizer_max_value = 136125771
+memo_minimizer_min_value = 379
+time spent: 143381.82467865944
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 784133513
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 79970553
+count_alpha_prunning = 20360334
+count_beta_prunning = 128812374
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 78785908
+memo_minimizer_max_value = 136388547
+memo_minimizer_min_value = 379
+time spent: 143981.82111239433
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 786349065
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 80196083
+count_alpha_prunning = 20455579
+count_beta_prunning = 129074964
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 79011369
+memo_minimizer_max_value = 136681161
+memo_minimizer_min_value = 379
+time spent: 144581.82073950768
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 788813025
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 80429941
+count_alpha_prunning = 20535915
+count_beta_prunning = 129389181
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 79246281
+memo_minimizer_max_value = 137022303
+memo_minimizer_min_value = 379
+time spent: 145181.82211732864
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 791453298
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 80676187
+count_alpha_prunning = 20628444
+count_beta_prunning = 129709749
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 79499884
+memo_minimizer_max_value = 137373568
+memo_minimizer_min_value = 379
+time spent: 145781.82408499718
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 794316733
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 80930671
+count_alpha_prunning = 20725076
+count_beta_prunning = 130052900
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 79768822
+memo_minimizer_max_value = 137748303
+memo_minimizer_min_value = 379
+time spent: 146381.8240623474
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 797015285
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 81202462
+count_alpha_prunning = 20837511
+count_beta_prunning = 130381624
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 80046830
+memo_minimizer_max_value = 138114269
+memo_minimizer_min_value = 379
+time spent: 146981.82474923134
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 799299220
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 81451182
+count_alpha_prunning = 20947077
+count_beta_prunning = 130656280
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 80292886
+memo_minimizer_max_value = 138424289
+memo_minimizer_min_value = 379
+time spent: 147581.8249349594
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 801246158
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 81670535
+count_alpha_prunning = 21037322
+count_beta_prunning = 130916214
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 80508728
+memo_minimizer_max_value = 138715203
+memo_minimizer_min_value = 379
+time spent: 148181.86272644997
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 803041411
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 81856960
+count_alpha_prunning = 21101867
+count_beta_prunning = 131151981
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 80682948
+memo_minimizer_max_value = 138972175
+memo_minimizer_min_value = 379
+time spent: 148781.82905983925
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 805078771
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 82064278
+count_alpha_prunning = 21174823
+count_beta_prunning = 131410382
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 80877475
+memo_minimizer_max_value = 139254522
+memo_minimizer_min_value = 379
+time spent: 149381.82912635803
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 807432130
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 82302514
+count_alpha_prunning = 21258485
+count_beta_prunning = 131711494
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 81103814
+memo_minimizer_max_value = 139583569
+memo_minimizer_min_value = 379
+time spent: 149981.82943344116
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 810073701
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 82556955
+count_alpha_prunning = 21345862
+count_beta_prunning = 132052414
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 81354151
+memo_minimizer_max_value = 139954543
+memo_minimizer_min_value = 379
+time spent: 150581.83033895493
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 812695795
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 82809355
+count_alpha_prunning = 21431936
+count_beta_prunning = 132392041
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 81602145
+memo_minimizer_max_value = 140322676
+memo_minimizer_min_value = 379
+time spent: 151181.83056902885
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 814979013
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 83024804
+count_alpha_prunning = 21505064
+count_beta_prunning = 132676147
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 81816041
+memo_minimizer_max_value = 140628431
+memo_minimizer_min_value = 379
+time spent: 151781.90760731697
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 817244043
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 83241760
+count_alpha_prunning = 21584692
+count_beta_prunning = 132965931
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 82042512
+memo_minimizer_max_value = 140944937
+memo_minimizer_min_value = 379
+time spent: 152381.89057588577
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 819450968
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 83483254
+count_alpha_prunning = 21677193
+count_beta_prunning = 133265539
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 82273009
+memo_minimizer_max_value = 141277997
+memo_minimizer_min_value = 379
+time spent: 152981.8907043934
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 821894190
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 83734644
+count_alpha_prunning = 21770912
+count_beta_prunning = 133589874
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 82515878
+memo_minimizer_max_value = 141636622
+memo_minimizer_min_value = 379
+time spent: 153581.89060401917
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 824189408
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 83945764
+count_alpha_prunning = 21849353
+count_beta_prunning = 133870369
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 82725709
+memo_minimizer_max_value = 141943115
+memo_minimizer_min_value = 379
+time spent: 157430.79723215103
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 826483881
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 84159571
+count_alpha_prunning = 21928210
+count_beta_prunning = 134147108
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 82938030
+memo_minimizer_max_value = 142245391
+memo_minimizer_min_value = 379
+time spent: 158030.79773545265
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 828390984
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 84351124
+count_alpha_prunning = 22004151
+count_beta_prunning = 134385004
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 83132406
+memo_minimizer_max_value = 142506916
+memo_minimizer_min_value = 379
+time spent: 158630.79785990715
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 831045566
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 84613233
+count_alpha_prunning = 22109362
+count_beta_prunning = 134696271
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 83398508
+memo_minimizer_max_value = 142847627
+memo_minimizer_min_value = 379
+time spent: 159230.79784417152
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 832588014
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 84760353
+count_alpha_prunning = 22166393
+count_beta_prunning = 134882529
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 83554110
+memo_minimizer_max_value = 143050989
+memo_minimizer_min_value = 379
+time spent: 161344.79313468933
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 834848340
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 85012859
+count_alpha_prunning = 22266154
+count_beta_prunning = 135174140
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 83789650
+memo_minimizer_max_value = 143378160
+memo_minimizer_min_value = 379
+time spent: 161944.7950911522
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 837025672
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 85259916
+count_alpha_prunning = 22374139
+count_beta_prunning = 135449421
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 84030381
+memo_minimizer_max_value = 143689719
+memo_minimizer_min_value = 379
+time spent: 162544.7954647541
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 839401089
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 85516182
+count_alpha_prunning = 22485612
+count_beta_prunning = 135752844
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 84284436
+memo_minimizer_max_value = 144033752
+memo_minimizer_min_value = 379
+time spent: 163144.7956585884
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 841463502
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 85759409
+count_alpha_prunning = 22592680
+count_beta_prunning = 136016324
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 84521208
+memo_minimizer_max_value = 144333897
+memo_minimizer_min_value = 379
+time spent: 164017.87275791168
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 843708449
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 86027945
+count_alpha_prunning = 22712813
+count_beta_prunning = 136293595
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 84780071
+memo_minimizer_max_value = 144650526
+memo_minimizer_min_value = 379
+time spent: 164617.87352752686
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 845551621
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 86249467
+count_alpha_prunning = 22810798
+count_beta_prunning = 136535749
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 84991487
+memo_minimizer_max_value = 144928213
+memo_minimizer_min_value = 379
+time spent: 165217.8734574318
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 847277400
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 86473579
+count_alpha_prunning = 22902081
+count_beta_prunning = 136780851
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 85190707
+memo_minimizer_max_value = 145205839
+memo_minimizer_min_value = 379
+time spent: 165817.8735203743
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 849052530
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 86678527
+count_alpha_prunning = 22986656
+count_beta_prunning = 137016438
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 85386235
+memo_minimizer_max_value = 145470028
+memo_minimizer_min_value = 379
+time spent: 166417.87450027466
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 850508146
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 86857125
+count_alpha_prunning = 23060279
+count_beta_prunning = 137210329
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 85548896
+memo_minimizer_max_value = 145689162
+memo_minimizer_min_value = 379
+time spent: 167017.87483501434
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 852496978
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 87075856
+count_alpha_prunning = 23146853
+count_beta_prunning = 137462169
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 85752873
+memo_minimizer_max_value = 145969342
+memo_minimizer_min_value = 379
+time spent: 167617.8756082058
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 854357886
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 87282091
+count_alpha_prunning = 23228861
+count_beta_prunning = 137696102
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 85944711
+memo_minimizer_max_value = 146230815
+memo_minimizer_min_value = 379
+time spent: 168217.87529921532
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 856053170
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 87468286
+count_alpha_prunning = 23310537
+count_beta_prunning = 137900075
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 86123731
+memo_minimizer_max_value = 146462699
+memo_minimizer_min_value = 379
+time spent: 168817.8802731037
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 857649147
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 87661289
+count_alpha_prunning = 23384690
+count_beta_prunning = 138126730
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 86296297
+memo_minimizer_max_value = 146719705
+memo_minimizer_min_value = 379
+time spent: 169417.88030076027
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 859474113
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 87878901
+count_alpha_prunning = 23474693
+count_beta_prunning = 138370440
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 86495340
+memo_minimizer_max_value = 146999609
+memo_minimizer_min_value = 379
+time spent: 170017.8809082508
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 861705713
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 88097331
+count_alpha_prunning = 23562860
+count_beta_prunning = 138644448
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 86716961
+memo_minimizer_max_value = 147304854
+memo_minimizer_min_value = 379
+time spent: 170617.8809723854
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 862020025
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 88124649
+count_alpha_prunning = 23574144
+count_beta_prunning = 138683029
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 86747560
+memo_minimizer_max_value = 147347066
+memo_minimizer_min_value = 379
+time spent: 175795.75751900673
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 864055900
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 88347297
+count_alpha_prunning = 23669791
+count_beta_prunning = 138945401
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 86969330
+memo_minimizer_max_value = 147638940
+memo_minimizer_min_value = 379
+time spent: 176395.75437617302
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 866051368
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 88580557
+count_alpha_prunning = 23767563
+count_beta_prunning = 139200264
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 87192969
+memo_minimizer_max_value = 147925266
+memo_minimizer_min_value = 379
+time spent: 176995.75454330444
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 867626373
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 88794940
+count_alpha_prunning = 23863936
+count_beta_prunning = 139410502
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 87384828
+memo_minimizer_max_value = 148171599
+memo_minimizer_min_value = 379
+time spent: 177596.24995088577
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 869445529
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 89009294
+count_alpha_prunning = 23954802
+count_beta_prunning = 139652556
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 87589350
+memo_minimizer_max_value = 148442352
+memo_minimizer_min_value = 379
+time spent: 178195.79728460312
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 871517088
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 89239772
+count_alpha_prunning = 24049400
+count_beta_prunning = 139925156
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 87813727
+memo_minimizer_max_value = 148746368
+memo_minimizer_min_value = 379
+time spent: 178795.79793691635
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 873410976
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 89463849
+count_alpha_prunning = 24149427
+count_beta_prunning = 140157777
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 88023510
+memo_minimizer_max_value = 149011919
+memo_minimizer_min_value = 379
+time spent: 179395.79910111427
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 875278448
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 89705574
+count_alpha_prunning = 24258165
+count_beta_prunning = 140398076
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 88240892
+memo_minimizer_max_value = 149292384
+memo_minimizer_min_value = 379
+time spent: 179995.80237054825
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 876964143
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 89903787
+count_alpha_prunning = 24348369
+count_beta_prunning = 140611464
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 88435466
+memo_minimizer_max_value = 149538787
+memo_minimizer_min_value = 379
+time spent: 180595.80234241486
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 878696377
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 90117238
+count_alpha_prunning = 24434500
+count_beta_prunning = 140838647
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 88626366
+memo_minimizer_max_value = 149796699
+memo_minimizer_min_value = 379
+time spent: 181195.79932904243
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 880852477
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 90354793
+count_alpha_prunning = 24525950
+count_beta_prunning = 141101103
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 88842184
+memo_minimizer_max_value = 150088108
+memo_minimizer_min_value = 379
+time spent: 199392.785520792
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 882203922
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 90524126
+count_alpha_prunning = 24595606
+count_beta_prunning = 141281283
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 88993349
+memo_minimizer_max_value = 150295528
+memo_minimizer_min_value = 379
+time spent: 199992.7897489071
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 883626437
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 90728956
+count_alpha_prunning = 24687868
+count_beta_prunning = 141477618
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 89172659
+memo_minimizer_max_value = 150526950
+memo_minimizer_min_value = 379
+time spent: 200592.78577375412
+size taken : 5368709216
+board size88
+hash size28
+memorization = 1
+count_memo_minimizer_max_value = 885288937
+count_memo_minimizer_min_value = 150
+count_memo_maximizer_max_value = 33
+count_memo_maximizer_min_value = 90954061
+count_alpha_prunning = 24784358
+count_beta_prunning = 141702694
+max_depth_maximizer = 39
+max_depth_minimizer = 40
+memo_maximizer_max_value = 116
+memo_maximizer_min_value = 89367225
+memo_minimizer_max_value = 150789527
+memo_minimizer_min_value = 379
+time spent: 201192.79034376144
+size taken : 5368709216
+board size88
+hash size28

@@ -1,32 +1,29 @@
 from random import randint
-from sys import getsizeof
-initial_board = [\
-    ['G','G','G','G','M'],\
-    ['G','G','G','G','G'],\
-    ['G','G','M','G',' '],\
-    ['G','G','G','G','G'],\
-    ['M','G','G','G','G']]
+initial_board = (\
+    ('G','G','G','G','M'),\
+    ('G','G','G','G','G'),\
+    ('G','G','M','G',' '),\
+    ('G','G','G','G','G'),\
+    ('M','G','G','G','G'))
+initial_board_rot1 = (\
+    ('M','G','G','G','G'),\
+    ('G','G','G','G','G'),\
+    ('G','G','M','G','G'),\
+    ('G','G','G','G','G'),\
+    ('G','G',' ','G','M'))
+initial_board_rot2 = (\
+    ('G','G','G','G','M'),\
+    ('G','G','G','G','G'),\
+    (' ','G','M','G','G'),\
+    ('G','G','G','G','G'),\
+    ('M','G','G','G','G'))
 
-
-initial_board_rot1 = [\
-    ['M','G','G','G','G'],\
-    ['G','G','G','G','G'],\
-    ['G','G','M','G','G'],\
-    ['G','G','G','G','G'],\
-    ['G','G',' ','G','M']]
-initial_board_rot2 = [\
-    ['G','G','G','G','M'],\
-    ['G','G','G','G','G'],\
-    [' ','G','M','G','G'],\
-    ['G','G','G','G','G'],\
-    ['M','G','G','G','G']]
-
-initial_board_rot3 = [\
-    ['M','G',' ','G','G'],\
-    ['G','G','G','G','G'],\
-    ['G','G','M','G','G'],\
-    ['G','G','G','G','G'],\
-    ['G','G','G','G','M']]
+initial_board_rot3 = (\
+    ('M','G',' ','G','G'),\
+    ('G','G','G','G','G'),\
+    ('G','G','M','G','G'),\
+    ('G','G','G','G','G'),\
+    ('G','G','G','G','M'))
 
 
 
@@ -66,6 +63,7 @@ board5 = (\
     (' ',' ',' ',' ',' '),\
     (' ',' ',' ',' ','M'))
 
+
 ZobristTable = [\
 				[[0,0],[0,0],[0,0],[0,0],[0,0]],
 				[[0,0],[0,0],[0,0],[0,0],[0,0]],
@@ -93,6 +91,7 @@ def compute_hash(board):
 				h ^= ZobristTable[i][j][piece]
 	return h
 
+init_table_zobrist()
 def board_piece_comparaison(p1,p2):
 	piece_value = {'M': 3 , 'G' : 2, ' ': 1}
 	if piece_value[p1] > piece_value[p2] : return 1
@@ -102,7 +101,8 @@ def least_lexicographical_board_hash(board):
 	least_lexicographical_board = board
 	for rep in range(0,3):
 		exitFlag = False
-		board_rotation = list(reversed(list(zip(*board))))
+		board_rotation = board[::-1]
+		board_rotation = tuple(zip(board_rotation[0],board_rotation[1],board_rotation[2],board_rotation[3],board_rotation[4]))
 		
 		for i in range(0,5):
 			for j in range(0,5):
@@ -116,6 +116,9 @@ def least_lexicographical_board_hash(board):
 					break
 			if(exitFlag): break
 		board = board_rotation
+	print ("the least value")
+	for r in least_lexicographical_board:
+		print(r)
 	return compute_hash(least_lexicographical_board)
 
 
@@ -137,11 +140,11 @@ def least_lexicographical_board_hash(board):
 # print(compute_hash(board3))
 # print(compute_hash(board4))
 
-init_table_zobrist()
 print(least_lexicographical_board_hash(initial_board))
 print(least_lexicographical_board_hash(initial_board_rot1))
 print(least_lexicographical_board_hash(initial_board_rot2))
 print(least_lexicographical_board_hash(initial_board_rot3))
 # for board in (initial_board,board1,board2,board3,board4):
 # 	print (compute_hash(board))
+
 

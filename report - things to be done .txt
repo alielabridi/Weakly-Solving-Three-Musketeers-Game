@@ -1,0 +1,30 @@
+start with a specific move of musketeer
+implement symmetry
+background:
+	idea of solving games
+	value of solving (purpose)
+	types of solving
+	methods of solving(alpha-beta, min-max, depth-first, heuristics)
+Our task:
+	game chosen
+	previous work on this game
+	value of replicating the studies
+Methods:
+	first-version, difficulties(bugs)
+	fixed version
+	norvig's implementation
+	run-time and memory limitation
+	computing the first levels of the game tree by hand\
+	and feeding it.
+results:
+	main result(musketeers always win)
+	computation statistics
+future work:
+	implementation with the symmetry handling
+	strong solving
+	just two musketeers in the game
+		(*)if we prove it, 
+Conclusion:
+	summarizing (what,why,how) we did it
+	what it can do for game playing
+		-strong solving: value of it
